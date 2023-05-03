@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Antwort" representedClassName="Antwort" syncable="YES" codeGenerationType="class">
+        <attribute name="antwortText" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Frage" representedClassName="Frage" syncable="YES" codeGenerationType="class">
+        <attribute name="frage" optional="YES" attributeType="String"/>
+        <attribute name="korrekteAntwort" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="antworten" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Antwort"/>
+    </entity>
+    <entity name="Quiz" representedClassName="Quiz" syncable="YES" codeGenerationType="class">
+        <attribute name="quizDescription" optional="YES" attributeType="String"/>
+        <attribute name="quizName" optional="YES" attributeType="String"/>
+        <relationship name="fragen" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Frage"/>
+    </entity>
+</model>

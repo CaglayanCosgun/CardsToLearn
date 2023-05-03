@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Questions" representedClassName="Questions" syncable="YES" codeGenerationType="class">
+        <attribute name="answerCorrect" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="answerFour" optional="YES" attributeType="String"/>
+        <attribute name="answerOne" optional="YES" attributeType="String"/>
+        <attribute name="answerThree" optional="YES" attributeType="String"/>
+        <attribute name="answerTwo" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="question" optional="YES" attributeType="String"/>
+        <relationship name="quiz" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Quiz" inverseName="questions" inverseEntity="Quiz"/>
+    </entity>
+    <entity name="Quiz" representedClassName="Quiz" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="quizTitle" optional="YES" attributeType="String"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Questions" inverseName="quiz" inverseEntity="Questions"/>
+    </entity>
+</model>

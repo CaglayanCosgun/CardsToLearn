@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C74B4CF42A00FBD9004B17E8 /* QuizCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B4CF32A00FBD9004B17E8 /* QuizCreationView.swift */; };
+		C74B4CFA2A010AB8004B17E8 /* ModelQuiz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C74B4CF82A010AB8004B17E8 /* ModelQuiz.xcdatamodeld */; };
+		C74B4CFC2A0243BF004B17E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C74B4CFB2A0243BF004B17E8 /* GoogleService-Info.plist */; };
+		C74B4CFF2A024584004B17E8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C74B4CFE2A024584004B17E8 /* FirebaseAuth */; };
+		C74B4D012A024584004B17E8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = C74B4D002A024584004B17E8 /* FirebaseDatabase */; };
+		C74B4D032A024584004B17E8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C74B4D022A024584004B17E8 /* FirebaseFirestore */; };
+		C74B4D052A024584004B17E8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C74B4D042A024584004B17E8 /* FirebaseStorage */; };
 		C78E2E4529DCDC3300E21862 /* CardsToLearnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2E4429DCDC3300E21862 /* CardsToLearnApp.swift */; };
 		C78E2E4729DCDC3300E21862 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2E4629DCDC3300E21862 /* ContentView.swift */; };
 		C78E2E4929DCDC3500E21862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C78E2E4829DCDC3500E21862 /* Assets.xcassets */; };
@@ -14,6 +21,16 @@
 		C78E2E5629DCDC3500E21862 /* CardsToLearnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2E5529DCDC3500E21862 /* CardsToLearnTests.swift */; };
 		C78E2E6029DCDC3500E21862 /* CardsToLearnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2E5F29DCDC3500E21862 /* CardsToLearnUITests.swift */; };
 		C78E2E6229DCDC3500E21862 /* CardsToLearnUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2E6129DCDC3500E21862 /* CardsToLearnUITestsLaunchTests.swift */; };
+		C78E2E7029DCDC8600E21862 /* FlashCard.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C78E2E6E29DCDC8600E21862 /* FlashCard.xcdatamodeld */; };
+		C78E2E7229DCDCD700E21862 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2E7129DCDCD700E21862 /* CardViewModel.swift */; };
+		C78E2E7429DCDE7400E21862 /* CardCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2E7329DCDE7400E21862 /* CardCreateView.swift */; };
+		C78E2E7629DCDF7600E21862 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2E7529DCDF7600E21862 /* CardListView.swift */; };
+		C78E2E7E29DE357700E21862 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2E7D29DE357700E21862 /* QuizViewModel.swift */; };
+		C78E2F2F29FAC1D400E21862 /* Question+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2F2D29FAC1D400E21862 /* Question+CoreDataClass.swift */; };
+		C78E2F3429FAC4D200E21862 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2F3329FAC4D100E21862 /* QuizView.swift */; };
+		C78E2F3629FBAEB100E21862 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2F3529FBAEB100E21862 /* RegisterView.swift */; };
+		C78E2F3929FBAEC600E21862 /* Register.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C78E2F3729FBAEC600E21862 /* Register.xcdatamodeld */; };
+		C78E2F3B29FBB3B300E21862 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2F3A29FBB3B300E21862 /* SplashScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C74B4CF32A00FBD9004B17E8 /* QuizCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCreationView.swift; sourceTree = "<group>"; };
+		C74B4CF92A010AB8004B17E8 /* ModelQuiz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ModelQuiz.xcdatamodel; sourceTree = "<group>"; };
+		C74B4CFB2A0243BF004B17E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C78E2E4129DCDC3300E21862 /* CardsToLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardsToLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78E2E4429DCDC3300E21862 /* CardsToLearnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsToLearnApp.swift; sourceTree = "<group>"; };
 		C78E2E4629DCDC3300E21862 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +64,16 @@
 		C78E2E5B29DCDC3500E21862 /* CardsToLearnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardsToLearnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78E2E5F29DCDC3500E21862 /* CardsToLearnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsToLearnUITests.swift; sourceTree = "<group>"; };
 		C78E2E6129DCDC3500E21862 /* CardsToLearnUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsToLearnUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C78E2E6F29DCDC8600E21862 /* FlashCard.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlashCard.xcdatamodel; sourceTree = "<group>"; };
+		C78E2E7129DCDCD700E21862 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		C78E2E7329DCDE7400E21862 /* CardCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCreateView.swift; sourceTree = "<group>"; };
+		C78E2E7529DCDF7600E21862 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
+		C78E2E7D29DE357700E21862 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		C78E2F2D29FAC1D400E21862 /* Question+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C78E2F3329FAC4D100E21862 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		C78E2F3529FBAEB100E21862 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		C78E2F3829FBAEC600E21862 /* Register.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Register.xcdatamodel; sourceTree = "<group>"; };
+		C78E2F3A29FBB3B300E21862 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +81,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C74B4D012A024584004B17E8 /* FirebaseDatabase in Frameworks */,
+				C74B4D052A024584004B17E8 /* FirebaseStorage in Frameworks */,
+				C74B4CFF2A024584004B17E8 /* FirebaseAuth in Frameworks */,
+				C74B4D032A024584004B17E8 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +108,8 @@
 		C78E2E3829DCDC3300E21862 = {
 			isa = PBXGroup;
 			children = (
+				C78E2F2D29FAC1D400E21862 /* Question+CoreDataClass.swift */,
+				C74B4CFB2A0243BF004B17E8 /* GoogleService-Info.plist */,
 				C78E2E4329DCDC3300E21862 /* CardsToLearn */,
 				C78E2E5429DCDC3500E21862 /* CardsToLearnTests */,
 				C78E2E5E29DCDC3500E21862 /* CardsToLearnUITests */,
@@ -96,6 +132,9 @@
 			children = (
 				C78E2E4429DCDC3300E21862 /* CardsToLearnApp.swift */,
 				C78E2E4629DCDC3300E21862 /* ContentView.swift */,
+				C78E2F2829FABF6300E21862 /* View */,
+				C78E2F2929FABF7300E21862 /* ViewModel */,
+				C78E2F2729FABF5600E21862 /* DataModel */,
 				C78E2E4829DCDC3500E21862 /* Assets.xcassets */,
 				C78E2E4A29DCDC3500E21862 /* Preview Content */,
 			);
@@ -127,6 +166,38 @@
 			path = CardsToLearnUITests;
 			sourceTree = "<group>";
 		};
+		C78E2F2729FABF5600E21862 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				C78E2E6E29DCDC8600E21862 /* FlashCard.xcdatamodeld */,
+				C78E2F3729FBAEC600E21862 /* Register.xcdatamodeld */,
+				C74B4CF82A010AB8004B17E8 /* ModelQuiz.xcdatamodeld */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		C78E2F2829FABF6300E21862 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C78E2E7329DCDE7400E21862 /* CardCreateView.swift */,
+				C78E2E7529DCDF7600E21862 /* CardListView.swift */,
+				C78E2F3529FBAEB100E21862 /* RegisterView.swift */,
+				C78E2F3A29FBB3B300E21862 /* SplashScreenView.swift */,
+				C78E2F3329FAC4D100E21862 /* QuizView.swift */,
+				C74B4CF32A00FBD9004B17E8 /* QuizCreationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C78E2F2929FABF7300E21862 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C78E2E7129DCDCD700E21862 /* CardViewModel.swift */,
+				C78E2E7D29DE357700E21862 /* QuizViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +214,12 @@
 			dependencies = (
 			);
 			name = CardsToLearn;
+			packageProductDependencies = (
+				C74B4CFE2A024584004B17E8 /* FirebaseAuth */,
+				C74B4D002A024584004B17E8 /* FirebaseDatabase */,
+				C74B4D022A024584004B17E8 /* FirebaseFirestore */,
+				C74B4D042A024584004B17E8 /* FirebaseStorage */,
+			);
 			productName = CardsToLearn;
 			productReference = C78E2E4129DCDC3300E21862 /* CardsToLearn.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +292,9 @@
 				Base,
 			);
 			mainGroup = C78E2E3829DCDC3300E21862;
+			packageReferences = (
+				C74B4CFD2A024584004B17E8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = C78E2E4229DCDC3300E21862 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +313,7 @@
 			files = (
 				C78E2E4C29DCDC3500E21862 /* Preview Assets.xcassets in Resources */,
 				C78E2E4929DCDC3500E21862 /* Assets.xcassets in Resources */,
+				C74B4CFC2A0243BF004B17E8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +338,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C78E2E7229DCDCD700E21862 /* CardViewModel.swift in Sources */,
+				C78E2F3629FBAEB100E21862 /* RegisterView.swift in Sources */,
+				C74B4CF42A00FBD9004B17E8 /* QuizCreationView.swift in Sources */,
+				C78E2E7429DCDE7400E21862 /* CardCreateView.swift in Sources */,
+				C78E2F3429FAC4D200E21862 /* QuizView.swift in Sources */,
 				C78E2E4729DCDC3300E21862 /* ContentView.swift in Sources */,
+				C78E2E7E29DE357700E21862 /* QuizViewModel.swift in Sources */,
+				C78E2E7029DCDC8600E21862 /* FlashCard.xcdatamodeld in Sources */,
+				C78E2E7629DCDF7600E21862 /* CardListView.swift in Sources */,
+				C78E2F3929FBAEC600E21862 /* Register.xcdatamodeld in Sources */,
 				C78E2E4529DCDC3300E21862 /* CardsToLearnApp.swift in Sources */,
+				C78E2F2F29FAC1D400E21862 /* Question+CoreDataClass.swift in Sources */,
+				C74B4CFA2A010AB8004B17E8 /* ModelQuiz.xcdatamodeld in Sources */,
+				C78E2F3B29FBB3B300E21862 /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +676,73 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C74B4CFD2A024584004B17E8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C74B4CFE2A024584004B17E8 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C74B4CFD2A024584004B17E8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		C74B4D002A024584004B17E8 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C74B4CFD2A024584004B17E8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		C74B4D022A024584004B17E8 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C74B4CFD2A024584004B17E8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		C74B4D042A024584004B17E8 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C74B4CFD2A024584004B17E8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		C74B4CF82A010AB8004B17E8 /* ModelQuiz.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C74B4CF92A010AB8004B17E8 /* ModelQuiz.xcdatamodel */,
+			);
+			currentVersion = C74B4CF92A010AB8004B17E8 /* ModelQuiz.xcdatamodel */;
+			path = ModelQuiz.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		C78E2E6E29DCDC8600E21862 /* FlashCard.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C78E2E6F29DCDC8600E21862 /* FlashCard.xcdatamodel */,
+			);
+			currentVersion = C78E2E6F29DCDC8600E21862 /* FlashCard.xcdatamodel */;
+			path = FlashCard.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		C78E2F3729FBAEC600E21862 /* Register.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C78E2F3829FBAEC600E21862 /* Register.xcdatamodel */,
+			);
+			currentVersion = C78E2F3829FBAEC600E21862 /* Register.xcdatamodel */;
+			path = Register.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C78E2E3929DCDC3300E21862 /* Project object */;
 }
