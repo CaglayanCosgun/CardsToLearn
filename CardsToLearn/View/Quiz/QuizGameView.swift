@@ -16,6 +16,11 @@ struct QuizGameView: View {
     @State private var currentQuestion = 1
     @State private var score = 0
     
+    let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
     var body: some View {
         VStack {
             HStack {
@@ -35,39 +40,20 @@ struct QuizGameView: View {
                     .cornerRadius(10)
                     .shadow(radius: 5)
                 
-                HStack(spacing: 20) { // zwei Frames nebeneinander
-                    VStack(spacing: 20) { // zwei Frames untereinander
-                        ForEach(0..<2) { index in
-                            Button(action: {
-                                checkAnswer(answer: questions[currentQuestion-1].answerOne ?? "")
-                            }) {
-                                Text(questions[currentQuestion-1].answerOne ?? "")
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                    .padding()
-                                    .frame(maxWidth: .infinity)
-                            }
-                            .background(Color.blue)
-                            .cornerRadius(10)
-                            .shadow(radius: 5)
+                LazyVGrid(columns: columns, spacing: 20) {
+                    ForEach(0..<4) { index in
+                        Button(action: {
+                            checkAnswer(answer: getAnswer(index: index))
+                        }) {
+                            Text(getAnswer(index: index))
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding()
+                                .frame(maxWidth: .infinity)
                         }
-                    }
-                    
-                    VStack(spacing: 20) { // zwei Frames untereinander
-                        ForEach(2..<4) { index in
-                            Button(action: {
-                                checkAnswer(answer: questions[currentQuestion-1].answerTwo ?? "")
-                            }) {
-                                Text(questions[currentQuestion-1].answerTwo ?? "")
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                    .padding()
-                                    .frame(maxWidth: .infinity)
-                            }
-                            .background(Color.blue)
-                            .cornerRadius(10)
-                            .shadow(radius: 5)
-                        }
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
                     }
                 }
                 .padding()
@@ -75,7 +61,7 @@ struct QuizGameView: View {
             
             Spacer()
             
-            NavigationLink(destination: ResultsView(score: score, totalQuestions: questions.count)) {
+            NavigationLink(destination: ResultsView(score: score, totalQuestions: questions.count,questions: questions)) {
                 Text("Ergebnisse anzeigen")
                     .font(.headline)
                     .foregroundColor(.white)
@@ -99,5 +85,19 @@ struct QuizGameView: View {
             currentQuestion += 1
         }
     }
-
+    
+    func getAnswer(index: Int) -> String {
+        switch index {
+        case 0:
+            return questions[currentQuestion-1].answerOne ?? ""
+        case 1:
+            return questions[currentQuestion-1].answerTwo ?? ""
+        case 2:
+            return questions[currentQuestion-1].answerThree ?? ""
+        case 3:
+            return questions[currentQuestion-1].answerFour ?? ""
+        default:
+            return ""
+        }
+    }
 }

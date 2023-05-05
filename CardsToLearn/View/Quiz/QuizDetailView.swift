@@ -42,16 +42,10 @@ struct QuizDetailView: View {
                         }
                     }
                 }
-                Button(action: {
-                    if let firstQuiz = quiz.first {
-                        let questions = viewModel.questions.filter({ $0.quiz?.quizTitle == firstQuiz.quizTitle })
-                        NavigationLink(destination: QuizGameView(quiz: firstQuiz, questions: questions)) {
-                            
-                        }
-                    }
-                }) {
-                    Text("Start Quiz")
-                }
+                NavigationLink( destination: QuizGameView(quiz: quiz.first!, questions: viewModel.questions.filter({ $0.quiz?.quizTitle == quiz.first!.quizTitle }))
+                                ) {
+                                    Text("Start Quiz")
+                                }
                 
             }
             .navigationBarTitle(Text(quiz.first?.quizTitle ?? ""), displayMode: .inline)
@@ -70,8 +64,9 @@ struct QuizDetailView: View {
         }
         
         var quizTitles: [String] {
-            Set(quiz.compactMap({ $0.quizTitle }))
+            Array(Set(quiz.compactMap({ $0.quizTitle }))
                 .sorted()
+                  )
         }
     }
 }
