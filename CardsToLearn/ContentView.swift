@@ -74,7 +74,9 @@ struct ContentView: View {
                         Label("Quiz", systemImage: "gamecontroller")
                     }
 
-                    Text("Profile")
+                    NavigationView {
+                        ProfileView()
+                    }
                         .tabItem {
                             Label("Profile", systemImage: "person.crop.circle")
                         }

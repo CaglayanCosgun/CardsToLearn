@@ -10,7 +10,7 @@ import SwiftUI
 
 struct QuizCreationView: View {
 
-    @StateObject var viewModel = QuizViewModel()
+    @EnvironmentObject var viewModel : QuizViewModel
 
     @State private var quizTitle = ""
     @State private var question = ""
@@ -84,55 +84,7 @@ struct QuizCreationView: View {
     }
 }
 
-struct QuizCreateCollectionView: View {
-    @StateObject var viewModel = QuizViewModel()
 
-    var body: some View {
-        NavigationView {
-            let groupedQuizzes = Dictionary(grouping: viewModel.quizzes, by: { $0.quizTitle ?? "" })
-            let quizTitles = Array(groupedQuizzes.keys).sorted()
 
-            List {
-                ForEach(quizTitles, id: \.self) { title in
-                    Section(header: Text(title)) {
-                        ForEach(groupedQuizzes[title] ?? []) { quiz in
-                            NavigationLink(destination: QuizDetailView(quiz: quiz)) {
-                                Text("Question \(quiz.questions?.count ?? 0)")
-                            }
-                        }
-                        .onDelete { indexSet in
-                            guard let quizToDelete = groupedQuizzes[title]?[indexSet.first ?? 0] else { return }
-                            viewModel.deleteQuiz(quizToDelete)
-                        }
-                    }
-                }
-            }
-            .navigationBarTitle("Created Quizzes")
-            .listStyle(GroupedListStyle())
-        }
-    }
 
-    
-    
-    
-    struct QuizDetailView: View {
-        let quiz: Quiz
-        @StateObject var viewModel = QuizViewModel()
-        
-        var body: some View {
-            List {
-                ForEach(Array(quiz.questions?.allObjects as? [Questions] ?? []), id: \.self) { question in
-                    VStack(alignment: .leading) {
-                        Text(question.question ?? "")
-                            .font(.headline)
-                        Text("A: " + (question.answerOne ?? ""))
-                        Text("B: " + (question.answerTwo ?? ""))
-                        Text("C: " + (question.answerThree ?? ""))
-                        Text("D: " + (question.answerFour ?? ""))
-                    }
-                }
-            }
-            .navigationBarTitle(Text(quiz.quizTitle ?? ""), displayMode: .inline)
-        }
-    }
-}
+

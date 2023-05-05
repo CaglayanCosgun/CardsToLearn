@@ -65,17 +65,17 @@ class CardViewModel: ObservableObject {
             print("Fehler beim Löschen einer KarteiKarte")
             return
         }
-        persistentContainer.viewContext.delete(cards[index])
-        
+        let cardToDelete = cards[index]
+        persistentContainer.viewContext.delete(cardToDelete)
         do {
             try persistentContainer.viewContext.save()
-            cards = try persistentContainer.viewContext.fetch(
-                NSFetchRequest<Card>(entityName: String(describing: Card.self))
-            )
+            loadCards()
         } catch {
-            print("Fehler beim Speichern oder Lesen der KarteiKarten: \(error.localizedDescription)")
+            print("Error while deleting a todo \(error)")
         }
     }
+
+
     
     func saveCard(_ card: Card) {
         do {
