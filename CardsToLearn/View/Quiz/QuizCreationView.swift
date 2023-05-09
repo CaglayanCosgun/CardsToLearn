@@ -83,8 +83,3 @@ struct QuizCreationView: View {
         }
     }
 }
-
-
-
-
-

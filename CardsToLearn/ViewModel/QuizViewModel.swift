@@ -73,15 +73,18 @@ class QuizViewModel: ObservableObject {
     
     func deleteQuiz(indexSet: IndexSet) {
         guard let index = indexSet.first else {
-            print("No index inside IndexSet")
+            print("Fehler beim Löschen einer KarteiKarte")
             return
         }
-        
         let quizToDelete = quizzes[index]
         container.viewContext.delete(quizToDelete)
         do {
             try container.viewContext.save()
+            
+            quizzes.remove(at: index)
+          
             fetchQuizzes()
+            fetchQuestions()
         } catch {
             print("Error while deleting a todo \(error)")
         }
@@ -97,4 +100,3 @@ class QuizViewModel: ObservableObject {
            }
        }
    }
-

@@ -10,12 +10,13 @@ import SwiftUI
 struct QuizSelectionView: View {
     var flashcards: [Card]
     @State private var animate = false
+    @State var selectedCard : Card?
     
     var body: some View {
         NavigationStack {
             ZStack {
                 LinearGradient(
-                    gradient: Gradient(colors: [.gray, .white,.blue]),
+                    gradient: Gradient(colors: [.gray, .white,.gray]),
                     startPoint: .topLeading,
                     endPoint: .bottomTrailing
                 ) // Verlauf als Hintergrund
@@ -77,8 +78,13 @@ struct QuizSelectionView: View {
                                 }
                         }
 
-                        NavigationLink(destination: Text("FinishedQuizView")) {
-                            Text("Finished Quizzes")
+                        NavigationLink(
+                            destination: QuizSettingsView(selectedCard: $selectedCard, cards: flashcards),
+                            tag: flashcards.first!,
+                            selection: $selectedCard
+                        ) {
+                            Text("Flashcards Quiz")
+                        
                                 .font(.system(size: 20, weight: .semibold, design: .default))
                                 .foregroundColor(.white)
                                 .padding(.vertical, 15)
@@ -103,4 +109,3 @@ struct QuizSelectionView: View {
         }
     }
 }
-

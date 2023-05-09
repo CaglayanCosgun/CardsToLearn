@@ -10,17 +10,17 @@ import SwiftUI
 struct ProfileView: View {
     
     // Properties
-    @State private var username: String = ""
-    @State private var firstName: String = ""
-    @State private var lastName: String = ""
-    @State private var email: String = ""
-    @State private var gender: String = ""
-    @State private var password: String = ""
+    @State private var username: String = "" // Speichert den Nutzernamen
+    @State private var firstName: String = "" // Speichert den Vornamen
+    @State private var lastName: String = "" // Speichert den Nachnamen
+    @State private var email: String = "" // Speichert die E-Mail-Adresse
+    @State private var gender: String = "" // Speichert das Geschlecht
+    @State private var password: String = "" // Speichert das Passwort
     
     var body: some View {
         ZStack {
             LinearGradient(
-                gradient: Gradient(colors: [.gray, .white,.blue]),
+                gradient: Gradient(colors: [.gray, .white,.gray]),
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             ) // Verlauf als Hintergrund
@@ -30,76 +30,76 @@ struct ProfileView: View {
                     // Profile Image
                     Image(systemName: "person")
                         .resizable()
-                        .frame(width: 150, height: 150)
+                        .frame(width: 150, height: 150) // Größe des Profilbilds
                         .foregroundColor(.gray)
-                        .padding()
+                        .padding() // Innenabstand
                     
                     // Welcome Text
                     Text("Welcome, User!")
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                        .padding(.bottom, 30)
-                        .foregroundColor(.black)
+                        .padding(.bottom, 30) // Abstand nach unten
+                        .foregroundColor(.black) // Textfarbe
                     
                     // User Information
                     Group {
-                        Text("User Information")
+                        Text("User Information") // Überschrift
                             .font(.headline)
                             .fontWeight(.bold)
                             .foregroundColor(.black)
-                            .padding(.top)
+                            .padding(.top) // Abstand nach oben
                         
-                        Divider()
+                        Divider() // Horizontale Trennlinie
                         
-                        TextField("Username", text: $username)
+                        TextField("Username", text: $username) // Nutzername
+                            .padding(.bottom) // Abstand nach unten
+                        
+                        TextField("First Name", text: $firstName) // Vorname
                             .padding(.bottom)
                         
-                        TextField("First Name", text: $firstName)
+                        TextField("Last Name", text: $lastName) // Nachname
                             .padding(.bottom)
                         
-                        TextField("Last Name", text: $lastName)
+                        TextField("Email", text: $email) // E-Mail-Adresse
                             .padding(.bottom)
                         
-                        TextField("Email", text: $email)
-                            .padding(.bottom)
-                        
-                        Text(gender)
+                        Text(gender) // Geschlecht
                             .padding(.bottom)
                     }
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, 20) // Abstand links und rechts
                     
                     // Change Password
                     Group {
-                        Text("Change Password")
+                        Text("Change Password") // Überschrift
                             .font(.headline)
                             .fontWeight(.bold)
                             .foregroundColor(.black)
-                            .padding(.top)
+                            .padding(.top) // Abstand nach oben
                         
-                        Divider()
+                        Divider() // Horizontale Trennlinie
                         
-                        SecureField("Current Password", text: $password)
+                        SecureField("Current Password", text: $password) // Aktuelles Passwort
+                            .padding(.bottom) // Abstand nach unten
+                        
+                        SecureField("New Password", text: $password) // Neues Passwort
                             .padding(.bottom)
                         
-                        SecureField("New Password", text: $password)
-                            .padding(.bottom)
-                        
-                        SecureField("Confirm Password", text: $password)
+                        SecureField("Confirm Password", text: $password) // Passwort bestätigen
                             .padding(.bottom)
                     }
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, 20) // Abstand links und rechts
                     
                     // Settings
                     Group {
-                        Text("Settings")
+                        Text("Settings") // Überschrift
                             .font(.headline)
                             .fontWeight(.bold)
                             .foregroundColor(.black)
-                            .padding(.top)
+                            .padding(.top) // Abstand nach oben
                         
-                        Divider()
+                        Divider() // Horizontale Trennlinie
                         
-                        Toggle(isOn: .constant(false)) {
+                        Toggle(isOn: .constant(false)) { // Schalter für Push-Benachrichtigungen
                             Text("Push Notifications")
                         }
                         .padding(.bottom)

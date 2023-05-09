@@ -42,6 +42,7 @@
 		C7C3EF422A04EF6400298F17 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF412A04EF6400298F17 /* LogInView.swift */; };
 		C7C3EF442A05186200298F17 /* QuizGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF432A05186200298F17 /* QuizGameView.swift */; };
 		C7C3EF462A05188600298F17 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF452A05188600298F17 /* ResultsView.swift */; };
+		C7C3EF482A092FAC00298F17 /* QuizSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF472A092FAC00298F17 /* QuizSettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		C7C3EF412A04EF6400298F17 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		C7C3EF432A05186200298F17 /* QuizGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizGameView.swift; sourceTree = "<group>"; };
 		C7C3EF452A05188600298F17 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		C7C3EF472A092FAC00298F17 /* QuizSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 				C78E2F3329FAC4D100E21862 /* QuizView.swift */,
 				C7C3EF352A03E6B400298F17 /* QuizCreateCollectionView.swift */,
 				C7C3EF332A03E68300298F17 /* QuizDetailView.swift */,
+				C7C3EF472A092FAC00298F17 /* QuizSettingsView.swift */,
 				C7C3EF432A05186200298F17 /* QuizGameView.swift */,
 				C7C3EF452A05188600298F17 /* ResultsView.swift */,
 				C7C3EF372A03E6F500298F17 /* QuizSelectionView.swift */,
@@ -407,6 +410,7 @@
 				C7C3EF3A2A03E74900298F17 /* CategoryHeaderView.swift in Sources */,
 				C78E2F3629FBAEB100E21862 /* RegisterView.swift in Sources */,
 				C7C3EF442A05186200298F17 /* QuizGameView.swift in Sources */,
+				C7C3EF482A092FAC00298F17 /* QuizSettingsView.swift in Sources */,
 				C7C3EF2D2A03E60D00298F17 /* ProfilView.swift in Sources */,
 				C74B4CF42A00FBD9004B17E8 /* QuizCreationView.swift in Sources */,
 				C7C3EF382A03E6F500298F17 /* QuizSelectionView.swift in Sources */,

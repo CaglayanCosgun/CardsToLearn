@@ -27,6 +27,7 @@ struct ResultsView: View {
                 let question = questions[index]
                 let answeredCorrectly = String(question.answerCorrect) == (selectedAnswers.indices.contains(index) ? selectedAnswers[index] : "")
 
+
                 HStack {
                     Text(question.question ?? "")
                         .font(.headline)

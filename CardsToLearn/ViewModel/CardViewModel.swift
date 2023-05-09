@@ -12,13 +12,12 @@ import CoreData
 class CardViewModel: ObservableObject {
     let persistentContainer: NSPersistentContainer
     @Published var cards = [Card]()
-        private var categoriesSet = [String]()
+    private var categoriesSet = [String]()
 
-        var categories: [String] {
-            categoriesSet
-        }
-    
-    
+    var categories: [String] {
+        categoriesSet
+    }
+
     init() {
         persistentContainer = NSPersistentContainer(name: "FlashCard")
         
@@ -31,19 +30,16 @@ class CardViewModel: ObservableObject {
         }
     }
     
-    private func loadCards() {
-        let request: NSFetchRequest<Card> = Card.fetchRequest()
-        let sort = NSSortDescriptor(key: "question", ascending: true)
-        request.sortDescriptors = [sort]
+    func loadCards() {
+        let request = NSFetchRequest<Card>(entityName: "Card")
         
         do {
             cards = try persistentContainer.viewContext.fetch(request)
-        } catch let error {
-            print("Error fetching tasks: \(error.localizedDescription)")
+        } catch {
+            print("loading the data failed: \(error)")
         }
     }
 
-    
     func addCard(category: String, question: String, answer: String) {
         let newCard = Card(context: persistentContainer.viewContext)
         newCard.category = category
@@ -52,14 +48,15 @@ class CardViewModel: ObservableObject {
         
         do {
             try persistentContainer.viewContext.save()
+            // Füge die neue Karte manuell zur `cards`-Sammlung hinzu
             cards.append(newCard)
+            // Rufe `loadCards()` auf, um die `cards`-Sammlung neu zu laden
             loadCards()
         } catch let error {
             print("Error saving new card: \(error.localizedDescription)")
         }
     }
 
-    
     func deleteCard(indexSet: IndexSet) {
         guard let index = indexSet.first else {
             print("Fehler beim Löschen einer KarteiKarte")
@@ -69,14 +66,15 @@ class CardViewModel: ObservableObject {
         persistentContainer.viewContext.delete(cardToDelete)
         do {
             try persistentContainer.viewContext.save()
+            // Entferne die gelöschte Karte manuell aus der `cards`-Sammlung
+            cards.remove(at: index)
+            // Rufe `loadCards()` auf, um die `cards`-Sammlung neu zu laden
             loadCards()
         } catch {
             print("Error while deleting a todo \(error)")
         }
     }
 
-
-    
     func saveCard(_ card: Card) {
         do {
             try persistentContainer.viewContext.save()
@@ -84,11 +82,12 @@ class CardViewModel: ObservableObject {
             print("Error saving card: \(error.localizedDescription)")
         }
     }
+
     func filteredCards(forCategory category: String?) -> [Card] {
-            if let category = category {
-                return cards.filter { $0.category == category }
-            } else {
-                return cards
-            }
+        if let category = category {
+            return cards.filter { $0.category == category }
+        } else {
+            return cards
         }
+    }
 }
