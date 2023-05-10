@@ -79,9 +79,7 @@ struct QuizSelectionView: View {
                         }
 
                         NavigationLink(
-                            destination: QuizSettingsView(selectedCard: $selectedCard, cards: flashcards),
-                            tag: flashcards.first!,
-                            selection: $selectedCard
+                            destination: QuizSettingsView(selectedCard: $selectedCard, cards: flashcards)
                         ) {
                             Text("Flashcards Quiz")
                         

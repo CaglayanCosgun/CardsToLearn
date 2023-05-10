@@ -9,8 +9,7 @@ import SwiftUI
 
 
 struct QuizCreationView: View {
-
-    @EnvironmentObject var viewModel : QuizViewModel
+    @EnvironmentObject var viewModel: QuizViewModel
 
     @State private var quizTitle = ""
     @State private var question = ""
@@ -19,8 +18,6 @@ struct QuizCreationView: View {
     @State private var answerThree = ""
     @State private var answerFour = ""
     @State private var answerCorrect = 0
-
-    @State private var isQuizListPresented = false
 
     var body: some View {
         NavigationView {
@@ -52,13 +49,15 @@ struct QuizCreationView: View {
 
                 Section {
                     Button("Add Question") {
-                        viewModel.saveQuiz(answerCorrect: Int16(answerCorrect),
-                                           question: question,
-                                           answerOne: answerOne,
-                                           answerTwo: answerTwo,
-                                           answerThree: answerThree,
-                                           answerFour: answerFour,
-                                           quizTitle: quizTitle)
+                        viewModel.saveQuiz(
+                            answerCorrect: Int16(answerCorrect),
+                            question: question,
+                            answerOne: answerOne,
+                            answerTwo: answerTwo,
+                            answerThree: answerThree,
+                            answerFour: answerFour,
+                            quizTitle: quizTitle
+                        )
 
                         question = ""
                         answerOne = ""
@@ -72,13 +71,8 @@ struct QuizCreationView: View {
                 }
             }
             .navigationBarTitle("Create Quiz")
-            .navigationBarItems(trailing: Button(action: {
-                isQuizListPresented = true
-            }, label: {
+            .navigationBarItems(trailing: NavigationLink(destination: QuizCreateCollectionView()) {
                 Image(systemName: "list.bullet")
-            }))
-            .sheet(isPresented: $isQuizListPresented, content: {
-                QuizCreateCollectionView()
             })
         }
     }

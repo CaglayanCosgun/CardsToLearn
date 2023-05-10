@@ -48,18 +48,53 @@ struct QuizView: View {
                             .font(.headline)
                             .padding()
                     }
+                    
                     Text("Score: \(correctAnswers)/\(cards.count)")
-                } else if isQuizOver {
-                    VStack {
+                }  else {
+                    VStack(spacing: 20) {
                         Text("Quiz is over! Final score: \(correctAnswers)/\(cards.count)")
-                        Text("Correct answers: \(correctAnswers)")
-                        Text("Wrong answers: \(wrongAnswers)")
-                        Button("Play again") {
+                            .font(.title)
+                        HStack(spacing: 20) {
+                            VStack {
+                                Text("Correct Answers")
+                                    .font(.headline)
+                                Text("\(correctAnswers)")
+                                    .font(.title)
+                            }
+                            VStack {
+                                Text("Wrong Answers")
+                                    .font(.headline)
+                                Text("\(wrongAnswers)")
+                                    .font(.title)
+                            }
+                        }
+                        Button("Play Again") {
                             startQuiz()
                         }
+                        .font(.headline)
+                        .padding(.vertical, 10)
+                        .padding(.horizontal, 20)
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        
+                        // "Back to Quiz" button
+//                        NavigationLink(destination: QuizSelectionView(flashcards: cards)) {
+//                            Text("Back to Quiz")
+//                                .font(.headline)
+//                                .padding(.vertical, 10)
+//                                .padding(.horizontal, 20)
+//                                .background(Color.gray)
+//                                .foregroundColor(.white)
+//                                .cornerRadius(10)
+//                        }
                     }
-                } else {
-                    Text("Loading...")
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .shadow(radius: 5)
+
+                    
                 }
             }
             .onAppear {
@@ -90,24 +125,24 @@ struct QuizView: View {
                 wrongAnswers += 1
                 showAlert(title: "Wrong", message: "The correct answer is \(card.answer ?? "")")
             }
-
+            
             showAnswer = true
-
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                if currentCardIndex < cards.count - 1 {
+                if currentCardIndex < cards.count {
                     currentCardIndex += 1
                     userAnswer = ""
                     showAnswer = false
-                } else {
+                } else if currentCardIndex >= cards.count  {
                     let totalScore = correctAnswers * 100 / cards.count
                     showAlert(title: "Quiz Over", message: "Congratulations! You have completed the quiz. Your score is \(totalScore)%")
                     isQuizOver = true
-                
                 }
             }
         }
     }
-
+    
+    
     
     private func showAlert(title: String, message: String) {
         alertTitle = title

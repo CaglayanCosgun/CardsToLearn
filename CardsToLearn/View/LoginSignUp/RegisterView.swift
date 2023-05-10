@@ -49,6 +49,7 @@ struct RegisterView: View {
                             Text($0)
                         }
                     }
+                    .pickerStyle(SegmentedPickerStyle())
                 }
 
                 // Button zum Registrieren des Benutzers

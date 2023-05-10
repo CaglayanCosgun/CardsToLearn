@@ -32,9 +32,9 @@ struct ContentView: View {
                     NavigationView {
                         VStack {
                             Picker("Select category", selection: $selectedCategory) {
-                                Text("All categories").tag(nil as String?)
+                                Text("All categories")
                                 ForEach(viewModel.categories.sorted(), id: \.self) { category in
-                                    Text(category).tag(category as String?)
+                                    Text(category)
                                 }
                             }
                             .pickerStyle(MenuPickerStyle())
@@ -80,6 +80,7 @@ struct ContentView: View {
                         .tabItem {
                             Label("Profile", systemImage: "person.crop.circle")
                         }
+                    
                 }
                 .sheet(isPresented: $isPresentingCardCreateView, content: {
                     CardCreateView(viewModel: viewModel)

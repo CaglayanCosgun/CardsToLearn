@@ -12,6 +12,7 @@ struct QuizGameView: View {
     
     let quiz: Quiz
     let questions: [Questions]
+    @State var answerCorrect = false
     
     @State private var currentQuestion = 1
     @State private var score = 0
@@ -79,6 +80,7 @@ struct QuizGameView: View {
     func checkAnswer(answer: String) {
         if answer == String(questions[currentQuestion-1].answerCorrect) {
             score += 1
+            answerCorrect = true
         }
         
         if currentQuestion < questions.count {

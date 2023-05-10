@@ -26,7 +26,7 @@ struct CardDetailView: View {
                             .font(.largeTitle)
                             .fontWeight(.bold) // Ein großer Text für die Überschrift
                         ShimmeringText(text: card.question ?? "") // Ein animiertes Textfeld, um die Frage anzuzeigen
-                            .font(.title)
+                            .font(.largeTitle)
                             .foregroundColor(.black)
                             .padding()
                     }
@@ -39,7 +39,7 @@ struct CardDetailView: View {
                             .font(.largeTitle)
                             .fontWeight(.bold) // Ein großer Text für die Überschrift
                         ShimmeringText(text: card.answer ?? "") // Ein animiertes Textfeld, um die Antwort anzuzeigen
-                            .font(.title)
+                            .font(.largeTitle)
                             .foregroundColor(.black)
                             .padding()
                     }
