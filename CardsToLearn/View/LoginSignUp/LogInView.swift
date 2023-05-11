@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var email = ""
-    @State private var password = ""
+    
+    @EnvironmentObject var viewModel: FireBaseViewModel
+    @EnvironmentObject var registerVM: RegisterViewModel
+   
     @State private var isAnimating = false
-    @State private var showPassword = false // Neue Variable für die Anzeige des Passworts
-
+    @State private var showPassword = false
+    @State private var isRegisterViewPresented = false
+    
     var body: some View {
         ZStack {
             LinearGradient(
@@ -30,7 +33,7 @@ struct LoginView: View {
                     .shadow(radius: 10)
 
                 VStack(spacing: 10) {
-                    TextField("Email", text: $email)
+                    TextField("Email", text: $viewModel.email)
                         .padding()
                         .background(Color.white)
                         .cornerRadius(10)
@@ -38,9 +41,9 @@ struct LoginView: View {
 
                     HStack {
                         if showPassword { // Passwort anzeigen, wenn showPassword true ist
-                            TextField("Password", text: $password)
+                            TextField("Password", text: $viewModel.password)
                         } else { // Sonst sicheres Textfeld anzeigen
-                            SecureField("Password", text: $password)
+                            SecureField("Password", text: $viewModel.password)
                         }
                         
                         // Button mit Auge-Icon zum Anzeigen des Passworts
@@ -92,17 +95,36 @@ struct LoginView: View {
                             )
                     }
                 }
-                .padding(.bottom, 50)
+                .padding(.bottom, 10)
 
-            }
-            .padding()
-            .navigationBarTitle("Log in")
-        }
-    }
-}
+                Button(action: {
+                                    // Register button action
+                                    isRegisterViewPresented = true
+                                }) {
+                                    HStack {
+                                        Text("Register")
+                                            .font(.title)
+                                            .foregroundColor(.white)
+                                            .padding()
+                                            .background(Color.green) // Customize the button color as needed
+                                            .cornerRadius(20)
+                                            .shadow(radius: 5)
+                                    }
+                                }
+                            }
+                            .padding()
+                            .navigationBarTitle("Log in")
+                        }
+                        .sheet(isPresented: $isRegisterViewPresented) {
+                            // Present the RegisterView as a sheet when isRegisterViewPresented is true
+                            RegisterView()
+                            // Pass the appropriate RegisterViewModel
+                        }
+                    }
+                }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}
+//struct LoginView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoginView()
+//    }
+//}

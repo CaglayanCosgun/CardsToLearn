@@ -11,8 +11,11 @@ struct ResultsView: View {
     let score: Int
     let totalQuestions: Int
     let questions: [Questions]
+    let correctAnswers: [Int]
     @State private var selectedAnswers = [String]()
-
+    @State private var currentQuestion = 1
+    @State var answerCorrect = false
+    
     var body: some View {
         VStack {
             Text("Ergebnisse")
@@ -25,16 +28,17 @@ struct ResultsView: View {
 
             ForEach(questions.indices) { index in
                 let question = questions[index]
-                let answeredCorrectly = String(question.answerCorrect) == (selectedAnswers.indices.contains(index) ? selectedAnswers[index] : "")
+                
 
                 HStack {
                     Text(question.question ?? "")
                         .font(.headline)
                         .padding()
-
+                    
                     Spacer()
+                    
 
-                    if answeredCorrectly {
+                    if correctAnswers[index] == 1 {
                         Image(systemName: "checkmark.circle")
                             .foregroundColor(.green)
                             .padding()
@@ -42,10 +46,31 @@ struct ResultsView: View {
                         Image(systemName: "xmark.circle")
                             .foregroundColor(.red)
                             .padding()
+                        
+                        
                     }
                 }
+                
             }
+            
+            Button("Play Again") {
+                reStartQuiz()
+            }
+            .font(.headline)
+            .padding(.vertical, 10)
+            .padding(.horizontal, 20)
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
         }
+         
     }
+    private func reStartQuiz() {
+       currentQuestion = 1
+       answerCorrect = false
+       selectedAnswers = [String]()
+        
+   }
+    
 }
 

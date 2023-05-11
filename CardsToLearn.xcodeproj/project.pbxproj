@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7130D3D2A0BDF5B00A154E5 /* FireBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7130D3C2A0BDF5B00A154E5 /* FireBaseViewModel.swift */; };
+		C7130D3F2A0D0D9E00A154E5 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7130D3E2A0D0D9E00A154E5 /* RegisterViewModel.swift */; };
 		C74B4CF42A00FBD9004B17E8 /* QuizCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B4CF32A00FBD9004B17E8 /* QuizCreationView.swift */; };
 		C74B4CFA2A010AB8004B17E8 /* ModelQuiz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C74B4CF82A010AB8004B17E8 /* ModelQuiz.xcdatamodeld */; };
 		C74B4CFC2A0243BF004B17E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C74B4CFB2A0243BF004B17E8 /* GoogleService-Info.plist */; };
@@ -63,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C7130D3C2A0BDF5B00A154E5 /* FireBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseViewModel.swift; sourceTree = "<group>"; };
+		C7130D3E2A0D0D9E00A154E5 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		C74B4CF32A00FBD9004B17E8 /* QuizCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCreationView.swift; sourceTree = "<group>"; };
 		C74B4CF92A010AB8004B17E8 /* ModelQuiz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ModelQuiz.xcdatamodel; sourceTree = "<group>"; };
 		C74B4CFB2A0243BF004B17E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -215,7 +219,9 @@
 			isa = PBXGroup;
 			children = (
 				C78E2E7129DCDCD700E21862 /* CardViewModel.swift */,
+				C7130D3E2A0D0D9E00A154E5 /* RegisterViewModel.swift */,
 				C78E2E7D29DE357700E21862 /* QuizViewModel.swift */,
+				C7130D3C2A0BDF5B00A154E5 /* FireBaseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -424,10 +430,12 @@
 				C78E2E7029DCDC8600E21862 /* FlashCard.xcdatamodeld in Sources */,
 				C78E2E7629DCDF7600E21862 /* CardListView.swift in Sources */,
 				C78E2F3929FBAEC600E21862 /* Register.xcdatamodeld in Sources */,
+				C7130D3D2A0BDF5B00A154E5 /* FireBaseViewModel.swift in Sources */,
 				C7C3EF3C2A03E76500298F17 /* ShimmeringText.swift in Sources */,
 				C78E2E4529DCDC3300E21862 /* CardsToLearnApp.swift in Sources */,
 				C7C3EF342A03E68300298F17 /* QuizDetailView.swift in Sources */,
 				C78E2F2F29FAC1D400E21862 /* Question+CoreDataClass.swift in Sources */,
+				C7130D3F2A0D0D9E00A154E5 /* RegisterViewModel.swift in Sources */,
 				C7C3EF3E2A03E7D700298F17 /* WelcomeScreen.swift in Sources */,
 				C74B4D072A03A724004B17E8 /* CardDetailView.swift in Sources */,
 				C74B4CFA2A010AB8004B17E8 /* ModelQuiz.xcdatamodeld in Sources */,

@@ -114,6 +114,17 @@ struct ProfileView: View {
                             Text("Deutsch").tag(1)
                         }
                         .padding(.bottom)
+                        
+                        Button(action: {
+                            // Aktion für "Konto löschen"
+                        }) {
+                            Text("Konto löschen")
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.red)
+                                .cornerRadius(10)
+                        }
+                        .padding(.bottom)
                     }
                     .padding(.horizontal, 20)
                     

@@ -21,6 +21,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct CardsToLearnApp: App {
     @StateObject var viewModel = QuizViewModel()
+    
     // register app delegate for Firebase setup
       @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
