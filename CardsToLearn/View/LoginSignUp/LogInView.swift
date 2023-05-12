@@ -9,12 +9,16 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @EnvironmentObject var viewModel: FireBaseViewModel
+    //@EnvironmentObject var viewModel: FireBaseViewModel
     @EnvironmentObject var registerVM: RegisterViewModel
+    
    
     @State private var isAnimating = false
     @State private var showPassword = false
     @State private var isRegisterViewPresented = false
+    @State private var email = ""
+    @State private var password = ""
+    
     
     var body: some View {
         ZStack {
@@ -33,7 +37,7 @@ struct LoginView: View {
                     .shadow(radius: 10)
 
                 VStack(spacing: 10) {
-                    TextField("Email", text: $viewModel.email)
+                    TextField("Email", text: $email)
                         .padding()
                         .background(Color.white)
                         .cornerRadius(10)
@@ -41,9 +45,9 @@ struct LoginView: View {
 
                     HStack {
                         if showPassword { // Passwort anzeigen, wenn showPassword true ist
-                            TextField("Password", text: $viewModel.password)
+                            TextField("Password", text: $password)
                         } else { // Sonst sicheres Textfeld anzeigen
-                            SecureField("Password", text: $viewModel.password)
+                            SecureField("Password", text: $password)
                         }
                         
                         // Button mit Auge-Icon zum Anzeigen des Passworts
@@ -78,21 +82,29 @@ struct LoginView: View {
 
                 Button(action: {
                     // Log in button action
-                    isAnimating = true
+                    isAnimating = false
+                    
                 }) {
                     VStack {
                         Text("Login")
                             .font(.title)
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
                             .padding()
-                            .background(Color.blue)
-                            .cornerRadius(20)
+                            .frame(width: 400,height: 50)
+                            .background(Color.white)
+                            .cornerRadius(10)
                             .shadow(radius: 5)
                             .scaleEffect(isAnimating ? 0.9 : 1)
-                            .animation(
-                                Animation.easeInOut(duration: 0.5)
-                                    .repeatForever(autoreverses: true)
+//                            .animation(
+//                                Animation.easeInOut(duration: 0.5)
+//                                    .repeatForever(autoreverses: true)
+//                            )
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.blue, lineWidth: 3)
+                                    .shadow(color: .blue,radius: 5)
                             )
+
                     }
                 }
                 .padding(.bottom, 10)
@@ -104,11 +116,17 @@ struct LoginView: View {
                                     HStack {
                                         Text("Register")
                                             .font(.title)
-                                            .foregroundColor(.white)
+                                            .foregroundColor(.black)
                                             .padding()
-                                            .background(Color.green) // Customize the button color as needed
-                                            .cornerRadius(20)
+                                            .frame(width:400,height: 50)
+                                            .background(Color.white)
+                                            .cornerRadius(10)
                                             .shadow(radius: 5)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .stroke(Color.blue, lineWidth: 3)
+                                                    .shadow(color: .blue,radius: 5)
+                                            )
                                     }
                                 }
                             }
@@ -116,15 +134,13 @@ struct LoginView: View {
                             .navigationBarTitle("Log in")
                         }
                         .sheet(isPresented: $isRegisterViewPresented) {
-                            // Present the RegisterView as a sheet when isRegisterViewPresented is true
                             RegisterView()
-                            // Pass the appropriate RegisterViewModel
                         }
                     }
                 }
 
-//struct LoginView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LoginView()
-//    }
-//}
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView()
+    }
+}

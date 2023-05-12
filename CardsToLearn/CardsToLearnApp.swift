@@ -20,15 +20,20 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct CardsToLearnApp: App {
-    @StateObject var viewModel = QuizViewModel()
-    
+    @StateObject var quizVM = QuizViewModel()
+    //@StateObject var firebaseVM = FireBaseViewModel()
+    @StateObject var cardVM = CardViewModel()
+    @StateObject var registerVM = RegisterViewModel()
     // register app delegate for Firebase setup
       @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(viewModel)
+                .environmentObject(quizVM)
+                //.environmentObject(firebaseVM)
+                .environmentObject(cardVM)
+                .environmentObject(registerVM)
         }
     }
 }

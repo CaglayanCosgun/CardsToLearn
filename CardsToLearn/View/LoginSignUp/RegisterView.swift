@@ -10,10 +10,7 @@ import SwiftUI
 import CoreData
 
 struct RegisterView: View {
-    
-    @EnvironmentObject var viewModel : RegisterViewModel
-    
-    
+    @EnvironmentObject var viewModel: RegisterViewModel
     
     @State private var username = ""
     @State private var email = ""
@@ -24,11 +21,10 @@ struct RegisterView: View {
     @State private var gender = "Männlich"
     @State private var isRegistered = false
     
-    
     let genderOptions = ["Männlich", "Weiblich"]
     
     var body: some View {
-        NavigationView {
+        NavigationStack{
             Form {
                 Section(header: Text("Account Information")) {
                     TextField("Username", text: $username)
@@ -37,7 +33,6 @@ struct RegisterView: View {
                     TextField("Lastname", text: $lastname)
                     SecureField("Password", text: $password)
                 }
-                
                 
                 Section(header: Text("Personal Information")) {
                     DatePicker("Birthdate", selection: $birthdate, in: ...Date(), displayedComponents: [.date])
@@ -50,14 +45,12 @@ struct RegisterView: View {
                     .pickerStyle(SegmentedPickerStyle())
                 }
                 
-                
                 Section {
                     Button("Register") {
                         let user = Users(context: viewModel.addUser(birthdate: birthdate, username: username, lastname: lastname, surname: surname, password: password, gender: gender, email: email))
-                        
                         do {
-                            try viewModel.saveUsers(birthdate: birthdate, username: username, lastname: lastname, surname: surname, password: password, gender: gender, email: email) // Speichern des neuen Benutzers im Core Data-Stack
-                            isRegistered = true // Set the registration flag to true
+                            try viewModel.saveUsers(birthdate: birthdate, username: username, lastname: lastname, surname: surname, password: password, gender: gender, email: email)
+                            isRegistered = true // Setze die isRegistered-Flag auf true, um den Alert anzuzeigen
                         } catch {
                             print(error.localizedDescription)
                         }
@@ -74,13 +67,24 @@ struct RegisterView: View {
                 Alert(
                     title: Text("Erfolgreich registriert"),
                     message: Text("Sie haben sich erfolgreich registriert."),
-                    dismissButton: .default(Text("OK"))
+                    dismissButton: .default(Text("OK")) {
+                        // Code, um zur Login-Ansicht zurückzukehren
+                        isRegistered = false // Setze die isRegistered-Flag auf false, um die Navigation auszulösen
+                    }
                 )
             }
+            .background(
+                NavigationLink(
+                    destination: LoginView(),
+                    isActive: $isRegistered,
+                    label: { EmptyView() }
+                )
+            )
         }
     }
 }
-//
+    
+
 //struct RegisterView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        RegisterView(viewModel: RegisterViewModel())

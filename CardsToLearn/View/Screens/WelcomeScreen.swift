@@ -65,36 +65,15 @@ struct WelcomeScreenView: View {
                 
                 Spacer()
                 
-                // Buttons
-                HStack {
-                    Button(action: {
-                        // Action for Button 1
-                    }) {
-                        Text("Sign In")
-                            .foregroundColor(.white)
-                    }
-                    .frame(width: showButtons ? 150 : 0, height: showButtons ? 50 : 0)
-                    .background(Color.blue)
-                    .cornerRadius(10)
-                    .animation(Animation.easeInOut(duration: 0.5).delay(0.5))
-                    
-                    Button(action: {
-                        // Action for Button 2
-                    }) {
-                        Text("Sign Up")
-                            .foregroundColor(.black)
-                    }
-                    .frame(width: showButtons ? 150 : 0, height: showButtons ? 50 : 0)
-                    .background(Color.green)
-                    .cornerRadius(10)
-                    .animation(Animation.easeInOut(duration: 0.5).delay(0.7))
-                }
+                
                 
                 Spacer()
             }
         }
     }
 }
+
+
 
 struct WelcomeScreenView_Previews: PreviewProvider {
     static var previews: some View {

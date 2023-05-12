@@ -11,14 +11,11 @@ import FirebaseAuth
 
 struct ContentView: View {
     @StateObject var viewModel = CardViewModel()
-    @StateObject var firebaseVM = FireBaseViewModel()
-    @StateObject var registerVM = RegisterViewModel()
     @State var isPresentingCardCreateView = false
     @State var selectedCard: Card?
     @State var selectedCategory: String?
     @State var showSplashScreen = true // Zustand für Anzeige des Splashscreens
-    @State var isLoggedIn = false // Zustand für die Anzeige des LoginView
-    @State var isRegistered = false
+    @State var isLoggedIn = false // Zustand für Überprüfung der Anmeldung
     
     var body: some View {
         ZStack {
@@ -28,16 +25,12 @@ struct ContentView: View {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // Den SplashScreen für 2 Sekunden anzeigen
                             withAnimation {
                                 showSplashScreen = false // Die Zustandsvariable ändern, um den SplashScreen auszublenden
-                                isLoggedIn = true // Die Zustandsvariable ändern, um den LoginView anzuzeigen
+                                isLoggedIn = true // Setze isLoggedIn auf true, um zur Anmeldeansicht zu wechseln
                             }
                         }
-                }
-            }
-             else if isLoggedIn {
+                    }
+            } else if isLoggedIn {
                 LoginView()
-                    .transition(.opacity)
-             } else if isRegistered {
-                 WelcomeScreenView()
                  
              }else {
                 TabView {
