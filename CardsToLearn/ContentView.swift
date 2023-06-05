@@ -7,162 +7,118 @@
 
 import SwiftUI
 import CoreData
-import FirebaseAuth
+
+
+//TODO Filter bei den Cards und Quiz ,für jeden Nutzer eine ID anlegen
 
 struct ContentView: View {
-    @StateObject var viewModel = CardViewModel()
+
+    @EnvironmentObject var viewModel: CardViewModel
+    @EnvironmentObject var firebaseViewModel: FireBaseViewModel
+    @EnvironmentObject var quizViewModel: QuizViewModel
+    @EnvironmentObject var quotesViewModel: ApiQuotesViewModel
+    @EnvironmentObject var noteViewModel: NoteViewModel
     @State var isPresentingCardCreateView = false
     @State var selectedCard: Card?
     @State var selectedCategory: String?
-    @State var showSplashScreen = true // Zustand für Anzeige des Splashscreens
-    @State var isLoggedIn = false // Zustand für Überprüfung der Anmeldung
+    @State var showSplashScreen = true
+    @State var showWelcomeScreen = true
     
+    @State var animate = false
+    @State var endSplash = false
+
     var body: some View {
         ZStack {
             if showSplashScreen {
-                SplashScreenView()
+                Logo()
                     .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // Den SplashScreen für 2 Sekunden anzeigen
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
                             withAnimation {
-                                showSplashScreen = false // Die Zustandsvariable ändern, um den SplashScreen auszublenden
-                                isLoggedIn = true // Setze isLoggedIn auf true, um zur Anmeldeansicht zu wechseln
+                                showSplashScreen = false
+                                showWelcomeScreen = false
                             }
                         }
                     }
-            } else if isLoggedIn {
-                LoginView()
-                 
-             }else {
-                TabView {
-                    NavigationView {
-                        VStack {
-                            Picker("Select category", selection: $selectedCategory) {
-                                Text("All categories")
-                                ForEach(viewModel.categories.sorted(), id: \.self) { category in
-                                    Text(category)
-                                }
-                            }
-                            .pickerStyle(MenuPickerStyle())
-                            .padding(.horizontal)
+            } else if firebaseViewModel.loggedIn {
+                if showWelcomeScreen {
+                    Splash()
+                        .onTapGesture {
+                            showWelcomeScreen = true
+                        }
+                } else {
+                    ZStack{
+                        AnimateSplash()
+                        
+                        ZStack{
+                            Color("black")
                             
-                            CardListView(cards: viewModel.filteredCards(forCategory: selectedCategory), selectedCard: $selectedCard,viewModel: viewModel)
+                            Image("cards")
+                                .resizable()
+                                .renderingMode(.original)
+                                .aspectRatio(contentMode: animate ? .fill : .fit)
+                                .frame(width: animate ? nil : 85, height: animate ? nil : 85)
+                                .scaleEffect(animate ? 3 : 1)
+                                .frame(width: UIScreen.main.bounds.width)
                         }
-                        .navigationBarTitle("Flashcards")
-                        .navigationBarItems(trailing:
-                                                Button(action: {
-                            isPresentingCardCreateView.toggle()
-                        }, label: {
-                            Image(systemName: "plus.circle")
-                        })
-                        )
-                    }
-                    .tabItem {
-                        Label("Cards", systemImage: "square.grid.2x2")
-                    }
-                    
-                    if let card = selectedCard {
-                        CardDetailView(card: card)
-                            .tabItem {
-                                Label("Card Detail", systemImage: "info.circle")
+                        .ignoresSafeArea(.all, edges: .all)
+                        .onAppear(perform: animateSplash)
+                        .opacity(endSplash ? 0 : 1)
+                        
+                        if !endSplash {
+                            Text("Loading...")
+                        } else {
+                            NavigationView {
+                               SideHomeMenu()
+                                
                             }
-                    } else {
-                        Text("No card selected")
-                            .tabItem {
-                                Label("Card Detail", systemImage: "info.circle")
-                            }
+                        }
                     }
-                    
-                    NavigationView {
-                        QuizSelectionView(flashcards: viewModel.cards)
-                    }
-                    .tabItem {
-                        Label("Quiz", systemImage: "gamecontroller")
-                    }
-                    
-                    NavigationView {
-                        ProfileView()
-                    }
-                    .tabItem {
-                        Label("Profile", systemImage: "person.crop.circle")
-                    }
-                    
-                    NavigationView {
-                        HomeView()
-                    }
-                    .tabItem {
-                        Label("Home", systemImage: "house")
-                    }
-                    
                 }
-                .sheet(isPresented: $isPresentingCardCreateView, content: {
-                    CardCreateView(viewModel: viewModel)
-                })
-            }
-        }
-    }
-}
-
-
-
-
-struct HomeView: View {
-    @State private var selectedDate = Date()
-    @State private var vocabulary = [Date: String]() // Vokabeln für jeden ausgewählten Tag
-    
-    var body: some View {
-        VStack {
-            CalendarView(selectedDate: $selectedDate)
-                .frame(height: 200)
-            
-            Spacer()
-            
-            VocabularyView(selectedDate: selectedDate, vocabulary: $vocabulary)
-                .background(Color.gray.opacity(0.1))
-                .padding()
-                .cornerRadius(10)
-        }
-    }
-}
-
-struct CalendarView: View {
-    @Binding var selectedDate: Date
-    
-    var body: some View {
-        VStack {
-            Text("Kalender")
-                .font(.title)
-            
-            DatePicker(
-                selection: $selectedDate,
-                displayedComponents: [.date],
-                label: { Text("") }
-            )
-            .datePickerStyle(GraphicalDatePickerStyle())
-            .padding()
-        }
-    }
-}
-
-struct VocabularyView: View {
-    var selectedDate: Date
-    @Binding var vocabulary: [Date: String]
-    
-    var body: some View {
-        VStack {
-            Text("Vokabeln")
-                .font(.title)
-            
-            if let vocab = vocabulary[selectedDate] {
-                Text(vocab)
-                    .padding()
-                    .background(Color.white)
-                    .border(Color.gray, width: 1)
-                    .cornerRadius(5)
             } else {
-                Text("Keine Vokabel für diesen Tag")
-                    .foregroundColor(.gray)
-                    .padding()
+                LoginSignUp()
+            }
+        }
+    }
+    
+    func animateSplash() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            withAnimation(Animation.easeOut(duration: 0.55)) {
+                animate.toggle()
+            }
+            
+            withAnimation(Animation.linear(duration: 0.45)) {
+                endSplash.toggle()
             }
         }
     }
 }
+
+
+
+//NavigationView {
+//    ZStack {
+//        if showSplashScreen {
+//            Logo()
+//                .onAppear {
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+//                        withAnimation {
+//                            showSplashScreen = false
+//                            showWelcomeScreen = false
+//                        }
+//                    }
+//                }
+//        } else if firebaseViewModel.loggedIn {
+//            if showWelcomeScreen {
+//                Splash()
+//                    .onTapGesture {
+//                        showWelcomeScreen = true
+//                    }
+//            } else {
+//               Home()
+//
+//            }
+//        } else {
+//            LoginSignUp()
+//        }
+//    }
+//}

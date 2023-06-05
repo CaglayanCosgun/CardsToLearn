@@ -36,6 +36,7 @@ class QuizViewModel: ObservableObject {
             print("Loading the data failed: \(error)")
         }
     }
+    
     func fetchQuestions() {
         let request = NSFetchRequest<Questions>(entityName: "Questions")
         
@@ -45,7 +46,6 @@ class QuizViewModel: ObservableObject {
             print("Loading the data failed: \(error)")
         }
     }
-    
     
     func saveQuiz(answerCorrect:Int16,question:String,answerOne:String,answerTwo:String,answerThree:String,answerFour:String,quizTitle:String) {
         
@@ -60,7 +60,6 @@ class QuizViewModel: ObservableObject {
         newQuestion.answerCorrect = answerCorrect
         newQuestion.quiz = newQuiz
         newQuestion.quiz?.quizTitle = quizTitle
-        
         
         do {
             try container.viewContext.save()
@@ -82,7 +81,7 @@ class QuizViewModel: ObservableObject {
             try container.viewContext.save()
             
             quizzes.remove(at: index)
-          
+            
             fetchQuizzes()
             fetchQuestions()
         } catch {
@@ -91,12 +90,12 @@ class QuizViewModel: ObservableObject {
     }
     
     func deleteQuestion(_ question: Questions) {
-           container.viewContext.delete(question)
-           do {
-               try container.viewContext.save()
-               fetchQuestions()
-           } catch {
-               print("Error while deleting a question: \(error)")
-           }
-       }
-   }
+        container.viewContext.delete(question)
+        do {
+            try container.viewContext.save()
+            fetchQuestions()
+        } catch {
+            print("Error while deleting a question: \(error)")
+        }
+    }
+}

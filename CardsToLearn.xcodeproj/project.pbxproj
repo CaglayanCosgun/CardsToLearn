@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C7130D3D2A0BDF5B00A154E5 /* FireBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7130D3C2A0BDF5B00A154E5 /* FireBaseViewModel.swift */; };
 		C7130D3F2A0D0D9E00A154E5 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7130D3E2A0D0D9E00A154E5 /* RegisterViewModel.swift */; };
-		C74B4CF42A00FBD9004B17E8 /* QuizCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B4CF32A00FBD9004B17E8 /* QuizCreationView.swift */; };
+		C71431F32A2B4FB0003A6CD2 /* AnimatedSplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71431F22A2B4FB0003A6CD2 /* AnimatedSplashScreen.swift */; };
+		C71431F52A2B51FD003A6CD2 /* SplashContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71431F42A2B51FD003A6CD2 /* SplashContentView.swift */; };
+		C71431F72A2B56D7003A6CD2 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71431F62A2B56D7003A6CD2 /* Extension.swift */; };
+		C7180F002A2BDBB2005C669B /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7180EFF2A2BDBB2005C669B /* test.swift */; };
+		C7185B002A2A35A400F52327 /* DynamicFilteredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7185AFF2A2A35A400F52327 /* DynamicFilteredView.swift */; };
 		C74B4CFA2A010AB8004B17E8 /* ModelQuiz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C74B4CF82A010AB8004B17E8 /* ModelQuiz.xcdatamodeld */; };
 		C74B4CFC2A0243BF004B17E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C74B4CFB2A0243BF004B17E8 /* GoogleService-Info.plist */; };
 		C74B4CFF2A024584004B17E8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C74B4CFE2A024584004B17E8 /* FirebaseAuth */; };
@@ -17,6 +20,18 @@
 		C74B4D032A024584004B17E8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C74B4D022A024584004B17E8 /* FirebaseFirestore */; };
 		C74B4D052A024584004B17E8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C74B4D042A024584004B17E8 /* FirebaseStorage */; };
 		C74B4D072A03A724004B17E8 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B4D062A03A724004B17E8 /* CardDetailView.swift */; };
+		C770333B2A2BF54C004E9A3D /* AnimateSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770333A2A2BF54B004E9A3D /* AnimateSplash.swift */; };
+		C770333F2A2BFD70004E9A3D /* SpecialTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770333E2A2BFD70004E9A3D /* SpecialTabBar.swift */; };
+		C77033412A2BFD98004E9A3D /* SpecialTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77033402A2BFD98004E9A3D /* SpecialTabBarView.swift */; };
+		C77033452A2C00CB004E9A3D /* SpecialCustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77033442A2C00CB004E9A3D /* SpecialCustomTabBar.swift */; };
+		C77033472A2C054A004E9A3D /* ExtensionSpecial.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77033462A2C054A004E9A3D /* ExtensionSpecial.swift */; };
+		C770334C2A2CB7AB004E9A3D /* HomeSlideOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770334B2A2CB7AB004E9A3D /* HomeSlideOutView.swift */; };
+		C770334E2A2CBD5C004E9A3D /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770334D2A2CBD5C004E9A3D /* Stories.swift */; };
+		C77033502A2CC62F004E9A3D /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C770334F2A2CC62F004E9A3D /* BlurView.swift */; };
+		C77033532A2CF86B004E9A3D /* SlideOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77033522A2CF86B004E9A3D /* SlideOutView.swift */; };
+		C77033552A2CF891004E9A3D /* SlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77033542A2CF891004E9A3D /* SlideMenu.swift */; };
+		C77033572A2D1D2C004E9A3D /* CustomSlideTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77033562A2D1D2C004E9A3D /* CustomSlideTabView.swift */; };
+		C77033592A2D28F5004E9A3D /* HomeSideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77033582A2D28F5004E9A3D /* HomeSideView.swift */; };
 		C78E2E4529DCDC3300E21862 /* CardsToLearnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2E4429DCDC3300E21862 /* CardsToLearnApp.swift */; };
 		C78E2E4729DCDC3300E21862 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2E4629DCDC3300E21862 /* ContentView.swift */; };
 		C78E2E4929DCDC3500E21862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C78E2E4829DCDC3500E21862 /* Assets.xcassets */; };
@@ -30,21 +45,56 @@
 		C78E2E7629DCDF7600E21862 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2E7529DCDF7600E21862 /* CardListView.swift */; };
 		C78E2E7E29DE357700E21862 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2E7D29DE357700E21862 /* QuizViewModel.swift */; };
 		C78E2F2F29FAC1D400E21862 /* Question+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2F2D29FAC1D400E21862 /* Question+CoreDataClass.swift */; };
-		C78E2F3429FAC4D200E21862 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2F3329FAC4D100E21862 /* QuizView.swift */; };
 		C78E2F3629FBAEB100E21862 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2F3529FBAEB100E21862 /* RegisterView.swift */; };
 		C78E2F3929FBAEC600E21862 /* Register.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C78E2F3729FBAEC600E21862 /* Register.xcdatamodeld */; };
 		C78E2F3B29FBB3B300E21862 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78E2F3A29FBB3B300E21862 /* SplashScreenView.swift */; };
+		C7A225E42A2A45B3000E4825 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A225E32A2A45B3000E4825 /* Persistence.swift */; };
+		C7A225F82A2A560D000E4825 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A225F72A2A560D000E4825 /* Tab.swift */; };
+		C7A225FB2A2AA33B000E4825 /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A225FA2A2AA33B000E4825 /* Tips.swift */; };
+		C7A225FD2A2AA47D000E4825 /* LearningTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A225FC2A2AA47D000E4825 /* LearningTipsView.swift */; };
+		C7A225FF2A2AB7A1000E4825 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A225FE2A2AB7A1000E4825 /* CustomCorners.swift */; };
+		C7A226022A2B3BC1000E4825 /* ToolSideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A226012A2B3BC1000E4825 /* ToolSideView.swift */; };
+		C7A226042A2B3BD5000E4825 /* ToolSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A226032A2B3BD5000E4825 /* ToolSide.swift */; };
 		C7C3EF2D2A03E60D00298F17 /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF2C2A03E60D00298F17 /* ProfilView.swift */; };
-		C7C3EF342A03E68300298F17 /* QuizDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF332A03E68300298F17 /* QuizDetailView.swift */; };
 		C7C3EF362A03E6B400298F17 /* QuizCreateCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF352A03E6B400298F17 /* QuizCreateCollectionView.swift */; };
-		C7C3EF382A03E6F500298F17 /* QuizSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF372A03E6F500298F17 /* QuizSelectionView.swift */; };
 		C7C3EF3A2A03E74900298F17 /* CategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF392A03E74900298F17 /* CategoryHeaderView.swift */; };
 		C7C3EF3C2A03E76500298F17 /* ShimmeringText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF3B2A03E76500298F17 /* ShimmeringText.swift */; };
 		C7C3EF3E2A03E7D700298F17 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF3D2A03E7D700298F17 /* WelcomeScreen.swift */; };
 		C7C3EF422A04EF6400298F17 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF412A04EF6400298F17 /* LogInView.swift */; };
-		C7C3EF442A05186200298F17 /* QuizGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF432A05186200298F17 /* QuizGameView.swift */; };
-		C7C3EF462A05188600298F17 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF452A05188600298F17 /* ResultsView.swift */; };
-		C7C3EF482A092FAC00298F17 /* QuizSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF472A092FAC00298F17 /* QuizSettingsView.swift */; };
+		C7D4A9F82A1BA87B0017C1BE /* ApiCallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4A9F72A1BA87B0017C1BE /* ApiCallViewModel.swift */; };
+		C7D4A9FA2A1BA99F0017C1BE /* ApiQuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4A9F92A1BA99F0017C1BE /* ApiQuizModel.swift */; };
+		C7D4A9FC2A1BABA50017C1BE /* QuizApiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4A9FB2A1BABA50017C1BE /* QuizApiView.swift */; };
+		C7D4A9FE2A1FF4EC0017C1BE /* ApiWordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4A9FD2A1FF4EC0017C1BE /* ApiWordViewModel.swift */; };
+		C7D4AA002A20920D0017C1BE /* ApiWordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4A9FF2A20920D0017C1BE /* ApiWordResponse.swift */; };
+		C7D4AA022A2095690017C1BE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4AA012A2095690017C1BE /* HomeView.swift */; };
+		C7D4AA042A2095A20017C1BE /* VocabularyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4AA032A2095A20017C1BE /* VocabularyView.swift */; };
+		C7D4AA062A2095CA0017C1BE /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4AA052A2095CA0017C1BE /* CalendarView.swift */; };
+		C7D4AA0A2A26291A0017C1BE /* ApiQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4AA092A26291A0017C1BE /* ApiQuotes.swift */; };
+		C7D4AA0C2A2629670017C1BE /* ApiQuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4AA0B2A2629670017C1BE /* ApiQuotesViewModel.swift */; };
+		C7D4AA0E2A262A9A0017C1BE /* QuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4AA0D2A262A9A0017C1BE /* QuotesView.swift */; };
+		C7D4AA162A2907500017C1BE /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4AA152A2907500017C1BE /* HomeTabView.swift */; };
+		C7D4AA192A2935E40017C1BE /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4AA182A2935E40017C1BE /* Splash.swift */; };
+		C7D4AA1C2A2946950017C1BE /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4AA1B2A2946950017C1BE /* Logo.swift */; };
+		C7D4AA1F2A29CD070017C1BE /* LoginSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4AA1E2A29CD070017C1BE /* LoginSignUp.swift */; };
+		C7D4AA222A29E4F40017C1BE /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4AA212A29E4F40017C1BE /* Calendar.swift */; };
+		C7D4AA252A29EF900017C1BE /* RelaxingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4AA242A29EF900017C1BE /* RelaxingView.swift */; };
+		C7D4AA2A2A2A012A0017C1BE /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4AA292A2A012A0017C1BE /* NoteViewModel.swift */; };
+		C7D4AA2C2A2A01EE0017C1BE /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4AA2B2A2A01EE0017C1BE /* NotesView.swift */; };
+		C7D4AA2F2A2A12540017C1BE /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C7D4AA2D2A2A12530017C1BE /* Notes.xcdatamodeld */; };
+		C7D4AA312A2A1A020017C1BE /* AddNewNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4AA302A2A1A020017C1BE /* AddNewNote.swift */; };
+		C7D70A252A12367E00227CB8 /* FireBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D70A242A12367E00227CB8 /* FireBaseViewModel.swift */; };
+		C7FD007D2A2D391D00953493 /* QuizCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FD007C2A2D391D00953493 /* QuizCreationView.swift */; };
+		C7FD007F2A2D393700953493 /* QuizDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FD007E2A2D393700953493 /* QuizDetailView.swift */; };
+		C7FD00812A2D395300953493 /* QuizGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FD00802A2D395300953493 /* QuizGameView.swift */; };
+		C7FD00832A2D396C00953493 /* QuizSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FD00822A2D396C00953493 /* QuizSelectionView.swift */; };
+		C7FD00852A2D398600953493 /* QuizSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FD00842A2D398600953493 /* QuizSettingsView.swift */; };
+		C7FD00872A2D399C00953493 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FD00862A2D399C00953493 /* QuizView.swift */; };
+		C7FD00892A2D39AA00953493 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FD00882A2D39AA00953493 /* ResultsView.swift */; };
+		C7FD008C2A2D3B1700953493 /* SideHomeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FD008B2A2D3B1700953493 /* SideHomeMenu.swift */; };
+		C7FD008E2A2D3D9900953493 /* SideHomeTabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FD008D2A2D3D9900953493 /* SideHomeTabButton.swift */; };
+		C7FD00902A2D424D00953493 /* SideCustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FD008F2A2D424D00953493 /* SideCustomCorner.swift */; };
+		C7FD00922A2D46E100953493 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FD00912A2D46E100953493 /* SideMenu.swift */; };
+		C7FD00942A2D47A000953493 /* SideHomeMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FD00932A2D47A000953493 /* SideHomeMain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,12 +115,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C7130D3C2A0BDF5B00A154E5 /* FireBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseViewModel.swift; sourceTree = "<group>"; };
 		C7130D3E2A0D0D9E00A154E5 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
-		C74B4CF32A00FBD9004B17E8 /* QuizCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCreationView.swift; sourceTree = "<group>"; };
+		C71431F02A2B4F1B003A6CD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C71431F22A2B4FB0003A6CD2 /* AnimatedSplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedSplashScreen.swift; sourceTree = "<group>"; };
+		C71431F42A2B51FD003A6CD2 /* SplashContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashContentView.swift; sourceTree = "<group>"; };
+		C71431F62A2B56D7003A6CD2 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		C7180EFF2A2BDBB2005C669B /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		C7185AFF2A2A35A400F52327 /* DynamicFilteredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFilteredView.swift; sourceTree = "<group>"; };
 		C74B4CF92A010AB8004B17E8 /* ModelQuiz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ModelQuiz.xcdatamodel; sourceTree = "<group>"; };
 		C74B4CFB2A0243BF004B17E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C74B4D062A03A724004B17E8 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
+		C770333A2A2BF54B004E9A3D /* AnimateSplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateSplash.swift; sourceTree = "<group>"; };
+		C770333E2A2BFD70004E9A3D /* SpecialTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialTabBar.swift; sourceTree = "<group>"; };
+		C77033402A2BFD98004E9A3D /* SpecialTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialTabBarView.swift; sourceTree = "<group>"; };
+		C77033442A2C00CB004E9A3D /* SpecialCustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialCustomTabBar.swift; sourceTree = "<group>"; };
+		C77033462A2C054A004E9A3D /* ExtensionSpecial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionSpecial.swift; sourceTree = "<group>"; };
+		C770334B2A2CB7AB004E9A3D /* HomeSlideOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSlideOutView.swift; sourceTree = "<group>"; };
+		C770334D2A2CBD5C004E9A3D /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
+		C770334F2A2CC62F004E9A3D /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		C77033522A2CF86B004E9A3D /* SlideOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOutView.swift; sourceTree = "<group>"; };
+		C77033542A2CF891004E9A3D /* SlideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenu.swift; sourceTree = "<group>"; };
+		C77033562A2D1D2C004E9A3D /* CustomSlideTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlideTabView.swift; sourceTree = "<group>"; };
+		C77033582A2D28F5004E9A3D /* HomeSideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSideView.swift; sourceTree = "<group>"; };
 		C78E2E4129DCDC3300E21862 /* CardsToLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardsToLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78E2E4429DCDC3300E21862 /* CardsToLearnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsToLearnApp.swift; sourceTree = "<group>"; };
 		C78E2E4629DCDC3300E21862 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,21 +153,56 @@
 		C78E2E7529DCDF7600E21862 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
 		C78E2E7D29DE357700E21862 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		C78E2F2D29FAC1D400E21862 /* Question+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question+CoreDataClass.swift"; sourceTree = "<group>"; };
-		C78E2F3329FAC4D100E21862 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		C78E2F3529FBAEB100E21862 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		C78E2F3829FBAEC600E21862 /* Register.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Register.xcdatamodel; sourceTree = "<group>"; };
 		C78E2F3A29FBB3B300E21862 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		C7A225E32A2A45B3000E4825 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		C7A225F72A2A560D000E4825 /* Tab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		C7A225FA2A2AA33B000E4825 /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
+		C7A225FC2A2AA47D000E4825 /* LearningTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningTipsView.swift; sourceTree = "<group>"; };
+		C7A225FE2A2AB7A1000E4825 /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
+		C7A226012A2B3BC1000E4825 /* ToolSideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolSideView.swift; sourceTree = "<group>"; };
+		C7A226032A2B3BD5000E4825 /* ToolSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolSide.swift; sourceTree = "<group>"; };
 		C7C3EF2C2A03E60D00298F17 /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
-		C7C3EF332A03E68300298F17 /* QuizDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDetailView.swift; sourceTree = "<group>"; };
 		C7C3EF352A03E6B400298F17 /* QuizCreateCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCreateCollectionView.swift; sourceTree = "<group>"; };
-		C7C3EF372A03E6F500298F17 /* QuizSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSelectionView.swift; sourceTree = "<group>"; };
 		C7C3EF392A03E74900298F17 /* CategoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHeaderView.swift; sourceTree = "<group>"; };
 		C7C3EF3B2A03E76500298F17 /* ShimmeringText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmeringText.swift; sourceTree = "<group>"; };
 		C7C3EF3D2A03E7D700298F17 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
 		C7C3EF412A04EF6400298F17 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
-		C7C3EF432A05186200298F17 /* QuizGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizGameView.swift; sourceTree = "<group>"; };
-		C7C3EF452A05188600298F17 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
-		C7C3EF472A092FAC00298F17 /* QuizSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSettingsView.swift; sourceTree = "<group>"; };
+		C7D4A9F72A1BA87B0017C1BE /* ApiCallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallViewModel.swift; sourceTree = "<group>"; };
+		C7D4A9F92A1BA99F0017C1BE /* ApiQuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiQuizModel.swift; sourceTree = "<group>"; };
+		C7D4A9FB2A1BABA50017C1BE /* QuizApiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizApiView.swift; sourceTree = "<group>"; };
+		C7D4A9FD2A1FF4EC0017C1BE /* ApiWordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiWordViewModel.swift; sourceTree = "<group>"; };
+		C7D4A9FF2A20920D0017C1BE /* ApiWordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiWordResponse.swift; sourceTree = "<group>"; };
+		C7D4AA012A2095690017C1BE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C7D4AA032A2095A20017C1BE /* VocabularyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyView.swift; sourceTree = "<group>"; };
+		C7D4AA052A2095CA0017C1BE /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		C7D4AA092A26291A0017C1BE /* ApiQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiQuotes.swift; sourceTree = "<group>"; };
+		C7D4AA0B2A2629670017C1BE /* ApiQuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiQuotesViewModel.swift; sourceTree = "<group>"; };
+		C7D4AA0D2A262A9A0017C1BE /* QuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesView.swift; sourceTree = "<group>"; };
+		C7D4AA152A2907500017C1BE /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		C7D4AA182A2935E40017C1BE /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		C7D4AA1B2A2946950017C1BE /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
+		C7D4AA1E2A29CD070017C1BE /* LoginSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignUp.swift; sourceTree = "<group>"; };
+		C7D4AA212A29E4F40017C1BE /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		C7D4AA242A29EF900017C1BE /* RelaxingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxingView.swift; sourceTree = "<group>"; };
+		C7D4AA292A2A012A0017C1BE /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
+		C7D4AA2B2A2A01EE0017C1BE /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		C7D4AA2E2A2A12540017C1BE /* Note.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Note.xcdatamodel; sourceTree = "<group>"; };
+		C7D4AA302A2A1A020017C1BE /* AddNewNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNote.swift; sourceTree = "<group>"; };
+		C7D70A242A12367E00227CB8 /* FireBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseViewModel.swift; sourceTree = "<group>"; };
+		C7FD007C2A2D391D00953493 /* QuizCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCreationView.swift; sourceTree = "<group>"; };
+		C7FD007E2A2D393700953493 /* QuizDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDetailView.swift; sourceTree = "<group>"; };
+		C7FD00802A2D395300953493 /* QuizGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizGameView.swift; sourceTree = "<group>"; };
+		C7FD00822A2D396C00953493 /* QuizSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSelectionView.swift; sourceTree = "<group>"; };
+		C7FD00842A2D398600953493 /* QuizSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSettingsView.swift; sourceTree = "<group>"; };
+		C7FD00862A2D399C00953493 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		C7FD00882A2D39AA00953493 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		C7FD008B2A2D3B1700953493 /* SideHomeMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideHomeMenu.swift; sourceTree = "<group>"; };
+		C7FD008D2A2D3D9900953493 /* SideHomeTabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideHomeTabButton.swift; sourceTree = "<group>"; };
+		C7FD008F2A2D424D00953493 /* SideCustomCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideCustomCorner.swift; sourceTree = "<group>"; };
+		C7FD00912A2D46E100953493 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		C7FD00932A2D47A000953493 /* SideHomeMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideHomeMain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,12 +234,100 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C710D4AC2A2BF053007AFF25 /* OldAnimatedSplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C71431F62A2B56D7003A6CD2 /* Extension.swift */,
+				C71431F42A2B51FD003A6CD2 /* SplashContentView.swift */,
+				C71431F22A2B4FB0003A6CD2 /* AnimatedSplashScreen.swift */,
+			);
+			path = OldAnimatedSplashScreen;
+			sourceTree = "<group>";
+		};
+		C71431F12A2B4F9F003A6CD2 /* AnimatedSplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C710D4AC2A2BF053007AFF25 /* OldAnimatedSplashScreen */,
+				C770333A2A2BF54B004E9A3D /* AnimateSplash.swift */,
+			);
+			path = AnimatedSplashScreen;
+			sourceTree = "<group>";
+		};
+		C7180F022A2BE572005C669B /* DisneyArtLogo */ = {
+			isa = PBXGroup;
+			children = (
+				C7D4AA1B2A2946950017C1BE /* Logo.swift */,
+			);
+			path = DisneyArtLogo;
+			sourceTree = "<group>";
+		};
+		C770333C2A2BFD33004E9A3D /* OldToolBar */ = {
+			isa = PBXGroup;
+			children = (
+				C77033482A2CB744004E9A3D /* SpecialTabBar */,
+				C770333D2A2BFD43004E9A3D /* HomeTab */,
+				C7A226002A2B3BA0000E4825 /* SideToolBar */,
+			);
+			path = OldToolBar;
+			sourceTree = "<group>";
+		};
+		C770333D2A2BFD43004E9A3D /* HomeTab */ = {
+			isa = PBXGroup;
+			children = (
+				C7D4AA152A2907500017C1BE /* HomeTabView.swift */,
+				C7A225F72A2A560D000E4825 /* Tab.swift */,
+			);
+			path = HomeTab;
+			sourceTree = "<group>";
+		};
+		C77033482A2CB744004E9A3D /* SpecialTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C770333E2A2BFD70004E9A3D /* SpecialTabBar.swift */,
+				C77033442A2C00CB004E9A3D /* SpecialCustomTabBar.swift */,
+				C77033462A2C054A004E9A3D /* ExtensionSpecial.swift */,
+				C77033402A2BFD98004E9A3D /* SpecialTabBarView.swift */,
+			);
+			path = SpecialTabBar;
+			sourceTree = "<group>";
+		};
+		C77033492A2CB776004E9A3D /* CustomSlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				C77033522A2CF86B004E9A3D /* SlideOutView.swift */,
+				C77033562A2D1D2C004E9A3D /* CustomSlideTabView.swift */,
+				C77033582A2D28F5004E9A3D /* HomeSideView.swift */,
+				C77033542A2CF891004E9A3D /* SlideMenu.swift */,
+			);
+			path = CustomSlideMenu;
+			sourceTree = "<group>";
+		};
+		C770334A2A2CB78A004E9A3D /* SlideOutMenu */ = {
+			isa = PBXGroup;
+			children = (
+				C770334B2A2CB7AB004E9A3D /* HomeSlideOutView.swift */,
+				C770334F2A2CC62F004E9A3D /* BlurView.swift */,
+				C770334D2A2CBD5C004E9A3D /* Stories.swift */,
+			);
+			path = SlideOutMenu;
+			sourceTree = "<group>";
+		};
+		C77033512A2CF822004E9A3D /* OldSlideOutMenu */ = {
+			isa = PBXGroup;
+			children = (
+				C77033492A2CB776004E9A3D /* CustomSlideMenu */,
+				C770334A2A2CB78A004E9A3D /* SlideOutMenu */,
+			);
+			path = OldSlideOutMenu;
+			sourceTree = "<group>";
+		};
 		C78E2E3829DCDC3300E21862 = {
 			isa = PBXGroup;
 			children = (
 				C78E2F2D29FAC1D400E21862 /* Question+CoreDataClass.swift */,
 				C74B4CFB2A0243BF004B17E8 /* GoogleService-Info.plist */,
 				C78E2E4329DCDC3300E21862 /* CardsToLearn */,
+				C78E2E4829DCDC3500E21862 /* Assets.xcassets */,
 				C78E2E5429DCDC3500E21862 /* CardsToLearnTests */,
 				C78E2E5E29DCDC3500E21862 /* CardsToLearnUITests */,
 				C78E2E4229DCDC3300E21862 /* Products */,
@@ -158,12 +347,24 @@
 		C78E2E4329DCDC3300E21862 /* CardsToLearn */ = {
 			isa = PBXGroup;
 			children = (
+				C71431F02A2B4F1B003A6CD2 /* Info.plist */,
 				C78E2E4429DCDC3300E21862 /* CardsToLearnApp.swift */,
 				C78E2E4629DCDC3300E21862 /* ContentView.swift */,
-				C78E2F2829FABF6300E21862 /* View */,
+				C7A225E32A2A45B3000E4825 /* Persistence.swift */,
+				C71431F12A2B4F9F003A6CD2 /* AnimatedSplashScreen */,
+				C7A225F92A2AA307000E4825 /* LearningTips */,
+				C7D4AA232A29EF830017C1BE /* Relaxing */,
+				C7D4AA202A29E4E80017C1BE /* Calendar */,
+				C7D4AA262A2A00B00017C1BE /* Note */,
+				C7C3EF2E2A03E61F00298F17 /* Cards */,
+				C7D4AA172A2935D60017C1BE /* Splash */,
+				C7C3EF312A03E65B00298F17 /* Quiz */,
+				C7D4AA1D2A29CCDC0017C1BE /* LoginSignUp */,
+				C7D4AA1A2A29467F0017C1BE /* Logo */,
+				C7D4AA122A2904D90017C1BE /* Tab */,
+				C7D4A9F62A1BA86A0017C1BE /* API */,
 				C78E2F2929FABF7300E21862 /* ViewModel */,
 				C78E2F2729FABF5600E21862 /* DataModel */,
-				C78E2E4829DCDC3500E21862 /* Assets.xcassets */,
 				C78E2E4A29DCDC3500E21862 /* Preview Content */,
 			);
 			path = CardsToLearn;
@@ -172,6 +373,7 @@
 		C78E2E4A29DCDC3500E21862 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				C78E2F2829FABF6300E21862 /* OldViews */,
 				C78E2E4B29DCDC3500E21862 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -200,30 +402,50 @@
 				C78E2E6E29DCDC8600E21862 /* FlashCard.xcdatamodeld */,
 				C78E2F3729FBAEC600E21862 /* Register.xcdatamodeld */,
 				C74B4CF82A010AB8004B17E8 /* ModelQuiz.xcdatamodeld */,
+				C7D4AA2D2A2A12530017C1BE /* Notes.xcdatamodeld */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
 		};
-		C78E2F2829FABF6300E21862 /* View */ = {
+		C78E2F2829FABF6300E21862 /* OldViews */ = {
 			isa = PBXGroup;
 			children = (
 				C7C3EF2F2A03E63300298F17 /* LoginSignUp */,
-				C7C3EF2E2A03E61F00298F17 /* Cards */,
 				C7C3EF302A03E65000298F17 /* Screens */,
-				C7C3EF312A03E65B00298F17 /* Quiz */,
 			);
-			path = View;
+			path = OldViews;
 			sourceTree = "<group>";
 		};
 		C78E2F2929FABF7300E21862 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C7D4AA292A2A012A0017C1BE /* NoteViewModel.swift */,
+				C7180EFF2A2BDBB2005C669B /* test.swift */,
 				C78E2E7129DCDCD700E21862 /* CardViewModel.swift */,
 				C7130D3E2A0D0D9E00A154E5 /* RegisterViewModel.swift */,
 				C78E2E7D29DE357700E21862 /* QuizViewModel.swift */,
-				C7130D3C2A0BDF5B00A154E5 /* FireBaseViewModel.swift */,
+				C7D70A242A12367E00227CB8 /* FireBaseViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C7A225F92A2AA307000E4825 /* LearningTips */ = {
+			isa = PBXGroup;
+			children = (
+				C7A225FA2A2AA33B000E4825 /* Tips.swift */,
+				C7A225FC2A2AA47D000E4825 /* LearningTipsView.swift */,
+				C7A225FE2A2AB7A1000E4825 /* CustomCorners.swift */,
+			);
+			path = LearningTips;
+			sourceTree = "<group>";
+		};
+		C7A226002A2B3BA0000E4825 /* SideToolBar */ = {
+			isa = PBXGroup;
+			children = (
+				C7A226012A2B3BC1000E4825 /* ToolSideView.swift */,
+				C7A226032A2B3BD5000E4825 /* ToolSide.swift */,
+			);
+			path = SideToolBar;
 			sourceTree = "<group>";
 		};
 		C7C3EF2E2A03E61F00298F17 /* Cards */ = {
@@ -241,6 +463,8 @@
 			isa = PBXGroup;
 			children = (
 				C7C3EF2C2A03E60D00298F17 /* ProfilView.swift */,
+				C7D4AA012A2095690017C1BE /* HomeView.swift */,
+				C7D4AA052A2095CA0017C1BE /* CalendarView.swift */,
 				C78E2F3529FBAEB100E21862 /* RegisterView.swift */,
 				C7C3EF412A04EF6400298F17 /* LogInView.swift */,
 			);
@@ -260,16 +484,128 @@
 		C7C3EF312A03E65B00298F17 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
-				C74B4CF32A00FBD9004B17E8 /* QuizCreationView.swift */,
-				C78E2F3329FAC4D100E21862 /* QuizView.swift */,
 				C7C3EF352A03E6B400298F17 /* QuizCreateCollectionView.swift */,
-				C7C3EF332A03E68300298F17 /* QuizDetailView.swift */,
-				C7C3EF472A092FAC00298F17 /* QuizSettingsView.swift */,
-				C7C3EF432A05186200298F17 /* QuizGameView.swift */,
-				C7C3EF452A05188600298F17 /* ResultsView.swift */,
-				C7C3EF372A03E6F500298F17 /* QuizSelectionView.swift */,
+				C7FD007C2A2D391D00953493 /* QuizCreationView.swift */,
+				C7FD007E2A2D393700953493 /* QuizDetailView.swift */,
+				C7FD00842A2D398600953493 /* QuizSettingsView.swift */,
+				C7FD00882A2D39AA00953493 /* ResultsView.swift */,
+				C7FD00802A2D395300953493 /* QuizGameView.swift */,
+				C7FD00862A2D399C00953493 /* QuizView.swift */,
+				C7FD00822A2D396C00953493 /* QuizSelectionView.swift */,
 			);
 			path = Quiz;
+			sourceTree = "<group>";
+		};
+		C7D4A9F62A1BA86A0017C1BE /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C7D4AA102A278F4D0017C1BE /* APIModel */,
+				C7D4AA0F2A278F1D0017C1BE /* APIViewModel */,
+				C7D4AA112A278F660017C1BE /* APIView */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		C7D4AA0F2A278F1D0017C1BE /* APIViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C7D4A9F72A1BA87B0017C1BE /* ApiCallViewModel.swift */,
+				C7D4AA0B2A2629670017C1BE /* ApiQuotesViewModel.swift */,
+				C7D4A9FD2A1FF4EC0017C1BE /* ApiWordViewModel.swift */,
+			);
+			path = APIViewModel;
+			sourceTree = "<group>";
+		};
+		C7D4AA102A278F4D0017C1BE /* APIModel */ = {
+			isa = PBXGroup;
+			children = (
+				C7D4AA092A26291A0017C1BE /* ApiQuotes.swift */,
+				C7D4A9F92A1BA99F0017C1BE /* ApiQuizModel.swift */,
+				C7D4A9FF2A20920D0017C1BE /* ApiWordResponse.swift */,
+			);
+			path = APIModel;
+			sourceTree = "<group>";
+		};
+		C7D4AA112A278F660017C1BE /* APIView */ = {
+			isa = PBXGroup;
+			children = (
+				C7D4AA0D2A262A9A0017C1BE /* QuotesView.swift */,
+				C7D4A9FB2A1BABA50017C1BE /* QuizApiView.swift */,
+				C7D4AA032A2095A20017C1BE /* VocabularyView.swift */,
+			);
+			path = APIView;
+			sourceTree = "<group>";
+		};
+		C7D4AA122A2904D90017C1BE /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				C7FD008A2A2D3B0400953493 /* CurrentTab */,
+				C77033512A2CF822004E9A3D /* OldSlideOutMenu */,
+				C770333C2A2BFD33004E9A3D /* OldToolBar */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		C7D4AA172A2935D60017C1BE /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				C7D4AA182A2935E40017C1BE /* Splash.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		C7D4AA1A2A29467F0017C1BE /* Logo */ = {
+			isa = PBXGroup;
+			children = (
+				C7180F022A2BE572005C669B /* DisneyArtLogo */,
+			);
+			path = Logo;
+			sourceTree = "<group>";
+		};
+		C7D4AA1D2A29CCDC0017C1BE /* LoginSignUp */ = {
+			isa = PBXGroup;
+			children = (
+				C7D4AA1E2A29CD070017C1BE /* LoginSignUp.swift */,
+			);
+			path = LoginSignUp;
+			sourceTree = "<group>";
+		};
+		C7D4AA202A29E4E80017C1BE /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				C7D4AA212A29E4F40017C1BE /* Calendar.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		C7D4AA232A29EF830017C1BE /* Relaxing */ = {
+			isa = PBXGroup;
+			children = (
+				C7D4AA242A29EF900017C1BE /* RelaxingView.swift */,
+			);
+			path = Relaxing;
+			sourceTree = "<group>";
+		};
+		C7D4AA262A2A00B00017C1BE /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				C7D4AA2B2A2A01EE0017C1BE /* NotesView.swift */,
+				C7185AFF2A2A35A400F52327 /* DynamicFilteredView.swift */,
+				C7D4AA302A2A1A020017C1BE /* AddNewNote.swift */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		C7FD008A2A2D3B0400953493 /* CurrentTab */ = {
+			isa = PBXGroup;
+			children = (
+				C7FD008B2A2D3B1700953493 /* SideHomeMenu.swift */,
+				C7FD008F2A2D424D00953493 /* SideCustomCorner.swift */,
+				C7FD00932A2D47A000953493 /* SideHomeMain.swift */,
+				C7FD00912A2D46E100953493 /* SideMenu.swift */,
+				C7FD008D2A2D3D9900953493 /* SideHomeTabButton.swift */,
+			);
+			path = CurrentTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,33 +749,83 @@
 			buildActionMask = 2147483647;
 			files = (
 				C78E2E7229DCDCD700E21862 /* CardViewModel.swift in Sources */,
+				C77033572A2D1D2C004E9A3D /* CustomSlideTabView.swift in Sources */,
+				C7FD00902A2D424D00953493 /* SideCustomCorner.swift in Sources */,
 				C7C3EF3A2A03E74900298F17 /* CategoryHeaderView.swift in Sources */,
+				C77033502A2CC62F004E9A3D /* BlurView.swift in Sources */,
+				C77033452A2C00CB004E9A3D /* SpecialCustomTabBar.swift in Sources */,
+				C7FD00852A2D398600953493 /* QuizSettingsView.swift in Sources */,
+				C77033592A2D28F5004E9A3D /* HomeSideView.swift in Sources */,
+				C77033412A2BFD98004E9A3D /* SpecialTabBarView.swift in Sources */,
+				C77033552A2CF891004E9A3D /* SlideMenu.swift in Sources */,
+				C7A225FD2A2AA47D000E4825 /* LearningTipsView.swift in Sources */,
+				C7FD00832A2D396C00953493 /* QuizSelectionView.swift in Sources */,
+				C7FD00812A2D395300953493 /* QuizGameView.swift in Sources */,
 				C78E2F3629FBAEB100E21862 /* RegisterView.swift in Sources */,
-				C7C3EF442A05186200298F17 /* QuizGameView.swift in Sources */,
-				C7C3EF482A092FAC00298F17 /* QuizSettingsView.swift in Sources */,
+				C7D70A252A12367E00227CB8 /* FireBaseViewModel.swift in Sources */,
+				C71431F32A2B4FB0003A6CD2 /* AnimatedSplashScreen.swift in Sources */,
+				C7D4AA0C2A2629670017C1BE /* ApiQuotesViewModel.swift in Sources */,
+				C7FD007F2A2D393700953493 /* QuizDetailView.swift in Sources */,
+				C7FD00872A2D399C00953493 /* QuizView.swift in Sources */,
+				C7FD008C2A2D3B1700953493 /* SideHomeMenu.swift in Sources */,
+				C7D4AA042A2095A20017C1BE /* VocabularyView.swift in Sources */,
+				C7D4AA1F2A29CD070017C1BE /* LoginSignUp.swift in Sources */,
+				C7D4AA022A2095690017C1BE /* HomeView.swift in Sources */,
+				C7D4A9F82A1BA87B0017C1BE /* ApiCallViewModel.swift in Sources */,
+				C770333F2A2BFD70004E9A3D /* SpecialTabBar.swift in Sources */,
+				C7D4AA2F2A2A12540017C1BE /* Notes.xcdatamodeld in Sources */,
+				C7FD00892A2D39AA00953493 /* ResultsView.swift in Sources */,
+				C7FD007D2A2D391D00953493 /* QuizCreationView.swift in Sources */,
+				C770333B2A2BF54C004E9A3D /* AnimateSplash.swift in Sources */,
+				C7D4A9FC2A1BABA50017C1BE /* QuizApiView.swift in Sources */,
+				C71431F72A2B56D7003A6CD2 /* Extension.swift in Sources */,
 				C7C3EF2D2A03E60D00298F17 /* ProfilView.swift in Sources */,
-				C74B4CF42A00FBD9004B17E8 /* QuizCreationView.swift in Sources */,
-				C7C3EF382A03E6F500298F17 /* QuizSelectionView.swift in Sources */,
+				C7185B002A2A35A400F52327 /* DynamicFilteredView.swift in Sources */,
+				C7D4AA252A29EF900017C1BE /* RelaxingView.swift in Sources */,
+				C77033532A2CF86B004E9A3D /* SlideOutView.swift in Sources */,
+				C7D4AA002A20920D0017C1BE /* ApiWordResponse.swift in Sources */,
+				C7D4AA062A2095CA0017C1BE /* CalendarView.swift in Sources */,
 				C78E2E7429DCDE7400E21862 /* CardCreateView.swift in Sources */,
-				C7C3EF462A05188600298F17 /* ResultsView.swift in Sources */,
+				C7D4AA222A29E4F40017C1BE /* Calendar.swift in Sources */,
 				C7C3EF362A03E6B400298F17 /* QuizCreateCollectionView.swift in Sources */,
-				C78E2F3429FAC4D200E21862 /* QuizView.swift in Sources */,
+				C7A225F82A2A560D000E4825 /* Tab.swift in Sources */,
+				C7D4AA0E2A262A9A0017C1BE /* QuotesView.swift in Sources */,
+				C7D4AA0A2A26291A0017C1BE /* ApiQuotes.swift in Sources */,
 				C7C3EF422A04EF6400298F17 /* LogInView.swift in Sources */,
+				C7FD00942A2D47A000953493 /* SideHomeMain.swift in Sources */,
 				C78E2E4729DCDC3300E21862 /* ContentView.swift in Sources */,
 				C78E2E7E29DE357700E21862 /* QuizViewModel.swift in Sources */,
+				C7D4AA1C2A2946950017C1BE /* Logo.swift in Sources */,
 				C78E2E7029DCDC8600E21862 /* FlashCard.xcdatamodeld in Sources */,
 				C78E2E7629DCDF7600E21862 /* CardListView.swift in Sources */,
+				C7A226022A2B3BC1000E4825 /* ToolSideView.swift in Sources */,
+				C7A225E42A2A45B3000E4825 /* Persistence.swift in Sources */,
+				C770334C2A2CB7AB004E9A3D /* HomeSlideOutView.swift in Sources */,
+				C7D4AA2A2A2A012A0017C1BE /* NoteViewModel.swift in Sources */,
+				C7D4AA192A2935E40017C1BE /* Splash.swift in Sources */,
 				C78E2F3929FBAEC600E21862 /* Register.xcdatamodeld in Sources */,
-				C7130D3D2A0BDF5B00A154E5 /* FireBaseViewModel.swift in Sources */,
+				C7FD008E2A2D3D9900953493 /* SideHomeTabButton.swift in Sources */,
+				C7D4AA162A2907500017C1BE /* HomeTabView.swift in Sources */,
+				C7A226042A2B3BD5000E4825 /* ToolSide.swift in Sources */,
 				C7C3EF3C2A03E76500298F17 /* ShimmeringText.swift in Sources */,
 				C78E2E4529DCDC3300E21862 /* CardsToLearnApp.swift in Sources */,
-				C7C3EF342A03E68300298F17 /* QuizDetailView.swift in Sources */,
 				C78E2F2F29FAC1D400E21862 /* Question+CoreDataClass.swift in Sources */,
+				C770334E2A2CBD5C004E9A3D /* Stories.swift in Sources */,
 				C7130D3F2A0D0D9E00A154E5 /* RegisterViewModel.swift in Sources */,
+				C71431F52A2B51FD003A6CD2 /* SplashContentView.swift in Sources */,
+				C7D4AA312A2A1A020017C1BE /* AddNewNote.swift in Sources */,
+				C7D4AA2C2A2A01EE0017C1BE /* NotesView.swift in Sources */,
+				C7FD00922A2D46E100953493 /* SideMenu.swift in Sources */,
 				C7C3EF3E2A03E7D700298F17 /* WelcomeScreen.swift in Sources */,
+				C7A225FB2A2AA33B000E4825 /* Tips.swift in Sources */,
+				C7180F002A2BDBB2005C669B /* test.swift in Sources */,
+				C7A225FF2A2AB7A1000E4825 /* CustomCorners.swift in Sources */,
 				C74B4D072A03A724004B17E8 /* CardDetailView.swift in Sources */,
 				C74B4CFA2A010AB8004B17E8 /* ModelQuiz.xcdatamodeld in Sources */,
 				C78E2F3B29FBB3B300E21862 /* SplashScreenView.swift in Sources */,
+				C77033472A2C054A004E9A3D /* ExtensionSpecial.swift in Sources */,
+				C7D4A9FE2A1FF4EC0017C1BE /* ApiWordViewModel.swift in Sources */,
+				C7D4A9FA2A1BA99F0017C1BE /* ApiQuizModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,9 +987,9 @@
 				DEVELOPMENT_TEAM = 9PLYXR65LU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CardsToLearn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -630,9 +1016,9 @@
 				DEVELOPMENT_TEAM = 9PLYXR65LU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CardsToLearn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -827,6 +1213,16 @@
 			);
 			currentVersion = C78E2F3829FBAEC600E21862 /* Register.xcdatamodel */;
 			path = Register.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		C7D4AA2D2A2A12530017C1BE /* Notes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C7D4AA2E2A2A12540017C1BE /* Note.xcdatamodel */,
+			);
+			currentVersion = C7D4AA2E2A2A12540017C1BE /* Note.xcdatamodel */;
+			path = Notes.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

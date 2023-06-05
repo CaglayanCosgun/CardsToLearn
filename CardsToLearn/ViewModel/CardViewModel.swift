@@ -8,16 +8,14 @@
 import SwiftUI
 import CoreData
 
-
 class CardViewModel: ObservableObject {
     let persistentContainer: NSPersistentContainer
     @Published var cards = [Card]()
     private var categoriesSet = [String]()
-
     var categories: [String] {
         categoriesSet
     }
-
+    
     init() {
         persistentContainer = NSPersistentContainer(name: "FlashCard")
         
@@ -39,7 +37,7 @@ class CardViewModel: ObservableObject {
             print("loading the data failed: \(error)")
         }
     }
-
+    
     func addCard(category: String, question: String, answer: String) {
         let newCard = Card(context: persistentContainer.viewContext)
         newCard.category = category
@@ -56,25 +54,27 @@ class CardViewModel: ObservableObject {
             print("Error saving new card: \(error.localizedDescription)")
         }
     }
-
+    
     func deleteCard(indexSet: IndexSet) {
         guard let index = indexSet.first else {
             print("Fehler beim Löschen einer KarteiKarte")
             return
         }
+        
         let cardToDelete = cards[index]
         persistentContainer.viewContext.delete(cardToDelete)
+        
         do {
             try persistentContainer.viewContext.save()
-            // Entferne die gelöschte Karte manuell aus der `cards`-Sammlung
             cards.remove(at: index)
-            // Rufe `loadCards()` auf, um die `cards`-Sammlung neu zu laden
-            loadCards()
         } catch {
-            print("Error while deleting a todo \(error)")
+            print("Error while deleting a card: \(error)")
         }
     }
 
+
+
+    
     func saveCard(_ card: Card) {
         do {
             try persistentContainer.viewContext.save()
@@ -82,12 +82,10 @@ class CardViewModel: ObservableObject {
             print("Error saving card: \(error.localizedDescription)")
         }
     }
-
-    func filteredCards(forCategory category: String?) -> [Card] {
+    
+    func filteredCards(forCategory category: String?) {
         if let category = category {
-            return cards.filter { $0.category == category }
-        } else {
-            return cards
-        }
+        cards = cards.filter { $0.category == category }
+        } 
     }
 }

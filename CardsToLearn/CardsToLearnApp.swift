@@ -7,7 +7,7 @@
 
 import SwiftUI
 import FirebaseCore
-
+import CoreData
 
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
@@ -21,9 +21,15 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct CardsToLearnApp: App {
     @StateObject var quizVM = QuizViewModel()
-    //@StateObject var firebaseVM = FireBaseViewModel()
     @StateObject var cardVM = CardViewModel()
     @StateObject var registerVM = RegisterViewModel()
+    @StateObject var firebaseVM = FireBaseViewModel()
+    @StateObject var apiVM = ApiCallViewModel()
+    @StateObject var wordsApiVM = ApiWordViewModel()
+    @StateObject var quotesApiVM = ApiQuotesViewModel()
+    @StateObject var noteVM = NoteViewModel()
+  
+
     // register app delegate for Firebase setup
       @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
@@ -31,9 +37,14 @@ struct CardsToLearnApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(quizVM)
-                //.environmentObject(firebaseVM)
                 .environmentObject(cardVM)
                 .environmentObject(registerVM)
+                .environmentObject(firebaseVM)
+                .environmentObject(apiVM)
+                .environmentObject(wordsApiVM)
+                .environmentObject(quotesApiVM)
+                .environmentObject(noteVM)
+                
         }
     }
 }

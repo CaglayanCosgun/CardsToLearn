@@ -13,6 +13,14 @@ class RegisterViewModel: ObservableObject {
     var container: NSPersistentContainer
     @Published var users: [Users] = []
     
+    @Published var username = ""
+    @Published var surname = ""
+    @Published var lastname = ""
+    @Published var password = ""
+    @Published var email = ""
+    @Published var birthdate = Date()
+    @Published var gender = ""
+    //@Published var navPath = NavigationPath()
     
     init() {
         container = NSPersistentContainer(name: "Register")
@@ -23,7 +31,7 @@ class RegisterViewModel: ObservableObject {
         }
         
         fetchUsers()
-
+        
     }
     
     func fetchUsers() {
@@ -36,9 +44,7 @@ class RegisterViewModel: ObservableObject {
         }
     }
     
-    
     func saveUsers(birthdate:Date,username:String,lastname:String,surname:String,password:String,gender:String,email:String) {
-    
         
         let newUser = Users(context: container.viewContext)
         newUser.birthdate = birthdate
@@ -48,8 +54,6 @@ class RegisterViewModel: ObservableObject {
         newUser.password = password
         newUser.gender = gender
         newUser.email = email
-        
-        
         
         do {
             try container.viewContext.save()
@@ -83,7 +87,6 @@ class RegisterViewModel: ObservableObject {
         
         return container.viewContext
     }
-
     
     func deleteUser(indexSet: IndexSet) {
         guard let index = indexSet.first else {
@@ -96,10 +99,47 @@ class RegisterViewModel: ObservableObject {
             try container.viewContext.save()
             
             users.remove(at: index)
-          
+            
             fetchUsers()
         } catch {
             print("Error while deleting a User \(error)")
         }
     }
-   }
+    
+    func clearAllLoginFields() {
+        users.forEach { user in
+            user.username = ""
+            user.surname = ""
+            user.lastname = ""
+            user.birthdate = Date()
+            user.password = ""
+            user.gender = ""
+            user.email = ""
+        }
+        
+        do {
+            try container.viewContext.save()
+        } catch {
+            print("Error clearing login fields: \(error)")
+        }
+    }
+    
+    func checkLoginFields() -> Bool {
+        guard let firstUser = users.first else {
+            return false
+        }
+        
+        return !(firstUser.username?.isEmpty ?? true) && !(firstUser.email?.isEmpty ?? true)
+    }
+    
+    func login() -> Bool {
+        do {
+            let filteredUsers = try container.viewContext.fetch(Users.fetchRequest()) as? [Users] ?? []
+            let matchingUsers = filteredUsers.filter { $0.email == email }
+            return !matchingUsers.isEmpty
+        } catch {
+            print("Error fetching registers: \(error)")
+            return false
+        }
+    }
+}
