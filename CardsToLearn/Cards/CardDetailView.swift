@@ -55,18 +55,7 @@ struct CardDetailView: View {
                 
                 HStack { // Ein horizontal ausgerichteter Container
                     Spacer()
-                    
-                    Button(action: {
-                        // Aktion für den vorherigen Button
-                        // Hier kannst du den Code hinzufügen, um zur vorherigen Karte zu wechseln
-                    }) {
-                        Image(systemName: "arrow.left")
-                            .font(.title)
-                            .foregroundColor(.white)
-                    }
-                    .padding()
-                    .background(Color.blue)
-                    .cornerRadius(10)
+    
                     
                     Button(showingQuestion ? "Show Answer" : "Show Question") { // Ein Button, um zwischen Frage und Antwort zu wechseln
                         showingQuestion.toggle() // Ändert den internen Zustand, um die Frage oder Antwort anzuzeigen
@@ -74,22 +63,7 @@ struct CardDetailView: View {
                     .padding()
                     .foregroundColor(.white)
                     .background(Color.blue)
-                    .cornerRadius(10) // Ein Button, um zwischen Frage und Antwort zu wechseln
-                    
-                    Button(action: {
-                        if let currentIndex = viewModel.cards.firstIndex(of: card), currentIndex < viewModel.cards.count - 1 {
-                            selectedCard = viewModel.cards[currentIndex + 1]
-                        }
-                    }) {
-                        Image(systemName: "arrow.right")
-                            .font(.title)
-                            .foregroundColor(.white)
-                    }
-                    .padding()
-                    .background(Color.blue)
                     .cornerRadius(10)
-
-
                     
                     Spacer()
                 }

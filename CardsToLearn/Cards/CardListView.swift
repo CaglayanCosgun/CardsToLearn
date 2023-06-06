@@ -33,7 +33,7 @@ struct CardListView: View {
                     ForEach(categories, id: \.self) { category in // Für jede Kategorie eine Sektion erstellen
                         Section(header: Text(category)) {
                             ForEach(filteredCards(forCategory: category)) { card in // Für jede Karte in dieser Kategorie eine Zeile erstellen
-                                NavigationLink(destination: CardDetailView(card: card), tag: card, selection: $selectedCard) { // Navigationslink, um zur Detailansicht der Karte zu gelangen
+                                NavigationLink(destination: CardAnimateView(card: card), tag: card, selection: $selectedCard) { // Navigationslink, um zur Detailansicht der Karte zu gelangen
                                     if isRectangular { // Falls der interne Zustand rechteckig ist
                                         Rectangle() // Eine rechteckige Karte erstellen
                                             .foregroundColor(.white)

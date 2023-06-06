@@ -12,7 +12,7 @@ struct CustomSlideTabView: View {
     @EnvironmentObject var firebaseViewModel: FireBaseViewModel
     @EnvironmentObject var quizViewModel: QuizViewModel
     @EnvironmentObject var quotesViewModel: ApiQuotesViewModel
-    @EnvironmentObject var noteViewModel: NoteViewModel
+    
     @State var selectedCategory: String?
     @State var selectedCard: Card?
     
@@ -61,7 +61,7 @@ struct CustomSlideTabView: View {
                 HomeSideView()
                     .tag("Home")
                 
-                NotesView()
+                VocabularyView()
                     .tag("Note")
                 
                 QuotesView()

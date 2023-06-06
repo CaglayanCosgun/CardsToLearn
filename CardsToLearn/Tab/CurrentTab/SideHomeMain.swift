@@ -13,7 +13,7 @@ struct SideHomeMain: View {
     @EnvironmentObject var firebaseViewModel: FireBaseViewModel
     @EnvironmentObject var quizViewModel: QuizViewModel
     @EnvironmentObject var quotesViewModel: ApiQuotesViewModel
-    @EnvironmentObject var notesViewModel: NoteViewModel
+    
     @State var isPresentingCardCreateView = false
     @State var selectedCard: Card?
     @State var selectedCategory: String?
@@ -31,7 +31,7 @@ struct SideHomeMain: View {
             HomeSideView()
                 .tag("Home")
             
-            NotesView()
+            Home()
                 .tag("Note")
             
             QuotesView()

@@ -22,7 +22,7 @@ struct SpecialTabBarView: View {
     var body: some View {
         VStack(spacing: 0) {
             TabView(selection: $activeTab) {
-                NotesView()
+                VocabularyView()
                     .navigationBarHidden(true)
                     .tabItem {
                         Image(systemName: "note.text")

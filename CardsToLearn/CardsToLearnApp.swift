@@ -20,6 +20,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct CardsToLearnApp: App {
+    let persistenceController = PersistenceController.shared
     @StateObject var quizVM = QuizViewModel()
     @StateObject var cardVM = CardViewModel()
     @StateObject var registerVM = RegisterViewModel()
@@ -27,7 +28,9 @@ struct CardsToLearnApp: App {
     @StateObject var apiVM = ApiCallViewModel()
     @StateObject var wordsApiVM = ApiWordViewModel()
     @StateObject var quotesApiVM = ApiQuotesViewModel()
-    @StateObject var noteVM = NoteViewModel()
+    @StateObject var taskVM = TaskViewModel()
+    
+    
   
 
     // register app delegate for Firebase setup
@@ -43,7 +46,10 @@ struct CardsToLearnApp: App {
                 .environmentObject(apiVM)
                 .environmentObject(wordsApiVM)
                 .environmentObject(quotesApiVM)
-                .environmentObject(noteVM)
+                .environmentObject(taskVM)
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                
+                
                 
         }
     }

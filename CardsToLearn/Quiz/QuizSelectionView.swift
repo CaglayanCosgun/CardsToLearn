@@ -11,7 +11,7 @@ struct QuizSelectionView: View {
     var flashcards: [Card]
     @State private var animate = false
     @State var selectedCard : Card?
-    
+    @State var isActive : Bool = false
     var body: some View {
         NavigationStack {
             ZStack {
@@ -46,7 +46,7 @@ struct QuizSelectionView: View {
                     
 
                     VStack(spacing: 20) { // Add another VStack for the navigation links
-                        NavigationLink(destination: QuizView(cards: flashcards)) {
+                        NavigationLink(destination: QuizApiView()) {
                             Text("Flashcards Quiz")
                                 .font(.system(size: 20, weight: .semibold, design: .default))
                                 .foregroundColor(.white)

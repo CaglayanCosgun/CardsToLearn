@@ -12,12 +12,12 @@ import CoreData
 //TODO Filter bei den Cards und Quiz ,für jeden Nutzer eine ID anlegen
 
 struct ContentView: View {
-
+    
     @EnvironmentObject var viewModel: CardViewModel
     @EnvironmentObject var firebaseViewModel: FireBaseViewModel
     @EnvironmentObject var quizViewModel: QuizViewModel
     @EnvironmentObject var quotesViewModel: ApiQuotesViewModel
-    @EnvironmentObject var noteViewModel: NoteViewModel
+    
     @State var isPresentingCardCreateView = false
     @State var selectedCard: Card?
     @State var selectedCategory: String?
@@ -67,10 +67,9 @@ struct ContentView: View {
                         if !endSplash {
                             Text("Loading...")
                         } else {
-                            NavigationView {
-                               SideHomeMenu()
-                                
-                            }
+                            
+                               Home()
+                            
                         }
                     }
                 }

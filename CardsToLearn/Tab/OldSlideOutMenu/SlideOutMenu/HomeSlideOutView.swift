@@ -13,7 +13,7 @@ struct HomeSlideOutView: View {
     @EnvironmentObject var firebaseViewModel: FireBaseViewModel
     @EnvironmentObject var quizViewModel: QuizViewModel
     @EnvironmentObject var quotesViewModel: ApiQuotesViewModel
-    @EnvironmentObject var noteViewModel: NoteViewModel
+    
     
     @State var selectedTab: SlideTabs = .notes
     
@@ -155,7 +155,7 @@ struct MenuView: View {
     @EnvironmentObject var firebaseViewModel: FireBaseViewModel
     @EnvironmentObject var quizViewModel: QuizViewModel
     @EnvironmentObject var quotesViewModel: ApiQuotesViewModel
-    @EnvironmentObject var noteViewModel: NoteViewModel
+    
 
     
     @Binding var showMenu: Bool
