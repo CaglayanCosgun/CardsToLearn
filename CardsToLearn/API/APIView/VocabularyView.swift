@@ -65,8 +65,104 @@ struct VocabularyView: View {
     }
 }
 
-struct VocabularyView_Previews: PreviewProvider {
-    static var previews: some View {
-        VocabularyView()
-    }
-}
+//struct VocabularyView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        VocabularyView()
+//    }
+//}
+
+
+//struct ApiVocabularyView: View {
+//    
+//    @EnvironmentObject var wordVM: ApiWordViewModel
+//    @State private var searchWord: String = ""
+//    
+//    @State var show: Bool = false
+//    @State var text: String = ""
+//    
+//    var body: some View{
+//        
+//        VStack(spacing: 0){
+//            
+//            HStack{
+//                
+//                if !self.show{
+//                    
+//                    Text("Dictionary")
+//                        .fontWeight(.bold)
+//                        .font(.title)
+//                        .foregroundColor(.white)
+//                }
+//                
+//                
+//                
+//                Spacer(minLength: 0)
+//                
+//                HStack{
+//                    if self.show {
+//                        
+//                        Image(systemName: "magnifyingglass.circle")
+//                            .padding(.horizontal, 8)
+//                        
+//                        TextField("Seach a Word",text: self.$searchWord)
+//                            //.textFieldStyle(RoundedBorderTextFieldStyle())
+//                        Button{
+//                            withAnimation{
+//                                self.show.toggle()
+//                            }
+//                           
+//                        }label: {
+//                            Image(systemName: "xmark")
+//                                .foregroundColor(.black)
+//                        }
+//                        .padding(.horizontal, 8)
+//                    }
+//                    else {
+//                        Button{
+//                            
+//                            withAnimation{
+//                                self.show.toggle()
+//                            }
+//                            
+//                        }label: {
+//                            Image(systemName: "magnifyingglass.circle")
+//                                .foregroundColor(.black)
+//                                .padding(10)
+//                                
+//                        }
+//                    }
+//                }
+//                
+//                
+//                .padding(self.show ? 10 : 0)
+//                .background(Color.white)
+//                .cornerRadius(20)
+//            }
+//            .padding(.top, (UIApplication.shared.connectedScenes
+//            .first as? UIWindowScene)?.windows.first?.safeAreaInsets.top ?? 0 + 15)
+//            .padding(.horizontal)
+//            .padding(.bottom,10)
+//            .background(Color.gray)
+//            
+//            Spacer()
+//        }
+//        .edgesIgnoringSafeArea(.top)
+//    }
+//}
+//
+//
+//class Host: UIHostingController<ContentView> {
+//    
+//    override var preferredStatusBarStyle: UIStatusBarStyle{
+//        
+//        return .lightContent
+//    }
+//    
+//}
+//
+//
+//struct ApiVocabularyView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ApiVocabularyView()
+//    }
+//}

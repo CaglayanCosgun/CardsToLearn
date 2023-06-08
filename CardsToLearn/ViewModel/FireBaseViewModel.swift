@@ -19,6 +19,7 @@ class FireBaseViewModel: ObservableObject{
     // Login  Variablen
     @Published var email = ""
     @Published var password = ""
+    @Published var rePassword = ""
     @Published var username = ""
     @Published var surname = ""
     @Published var lastname = ""
@@ -92,6 +93,7 @@ class FireBaseViewModel: ObservableObject{
         
         email = ""
         password = ""
+        rePassword = ""
         username = ""
         surname = ""
         lastname = ""

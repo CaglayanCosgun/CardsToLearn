@@ -13,6 +13,7 @@ struct Home: View {
     @StateObject var taskModel: TaskViewModel = TaskViewModel()
     @Namespace var animation
     
+    
     @Environment(\.managedObjectContext) var context
     @Environment(\.editMode) var editButton
     

@@ -163,3 +163,5 @@ struct QuotesView: View {
         "marriage", "medical", "men", "mom", "money", "morning", "movies", "success"
     ]
 }
+
+

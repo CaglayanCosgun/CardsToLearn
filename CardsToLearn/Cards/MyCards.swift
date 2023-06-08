@@ -19,32 +19,14 @@ struct MyCardsSideBar: View {
         HStack(spacing: 0){
             
             VStack{
-                Button(action: {
-                    
-                }) {
-                    Image("menu")
-                        .renderingMode(.original)
-                        .resizable()
-                        .frame(width: 22,height: 22)
-                }
-                .padding(.top,UIApplication.shared.windows.first?.safeAreaInsets.top)
-                
-                Button(action: {
-                    
-                }) {
-                    Image("search")
-                        .renderingMode(.original)
-                        .resizable()
-                        .frame(width: 22,height: 22)
-                }.padding(.top,30)
-                
-                
+               
+
                 Group {
                     Button(action: {
                         self.index = 3
                     }) {
                         VStack{
-                            Text("MyProfile")
+                            Text("Relaxing")
                                 .frame(width: 120,height: 35)
                                 .foregroundColor(self.index == 3 ? Color.white : Color.black)
                         }
@@ -60,7 +42,7 @@ struct MyCardsSideBar: View {
                         self.index = 2
                     }) {
                         VStack{
-                            Text("Notifications")
+                            Text("Quotes")
                                 .frame(width: 120,height: 35)
                                 .foregroundColor(self.index == 2 ? Color.white : Color.black)
                         }
@@ -75,7 +57,7 @@ struct MyCardsSideBar: View {
                         self.index = 1
                     }) {
                         VStack{
-                            Text("Invoice")
+                            Text("Dictionary")
                                 .frame(width: 120,height: 35)
                                 .foregroundColor(self.index == 1 ? Color.white : Color.black)
                         }
@@ -127,13 +109,13 @@ struct MyCardsSideBar: View {
                         MainView()
                     }
                     else if self.index == 1{
-                        Invoice()
+                        ApiVocabularyView()
                     }
                     else if self.index == 2{
-                        Notifications()
+                        QuotesView()
                     }
                     else {
-                        Profil()
+                        Relax()
                     }
                 }
                 .padding(.top,UIApplication.shared.windows.first?.safeAreaInsets.top)
@@ -154,7 +136,7 @@ struct MainView: View {
         VStack{
             HStack{
                 
-                Text("Food & Delivery")
+                Text("Learning & Chill")
                     .font(.title)
                     .fontWeight(.bold)
                 
@@ -167,60 +149,7 @@ struct MainView: View {
                 
                 HStack{
                     
-                    Button(action: {
-                        self.index = 0
-                    }) {
-                        Text("Asian")
-                            .foregroundColor(self.index == 0 ? Color("gray1") : Color.black.opacity(0.7))
-                            .padding(.horizontal,30)
-                            .padding(.vertical,12)
-                    }
-                    .background(self.index == 0 ? Color.black.opacity(0.06) : Color.clear)
-                    .clipShape(CShapeCard1())
-                    
-                    Button(action: {
-                        self.index = 1
-                    }) {
-                        Text("American")
-                            .foregroundColor(self.index == 1 ? Color("gray1") : Color.black.opacity(0.7))
-                            .padding(.horizontal,30)
-                            .padding(.vertical,12)
-                    }
-                    .background(self.index == 1 ? Color.black.opacity(0.06) : Color.clear)
-                    .clipShape(CShapeCard1())
-                    
-                    Button(action: {
-                        self.index = 2
-                    }) {
-                        Text("Mexican")
-                            .foregroundColor(self.index == 2 ? Color("gray1") : Color.black.opacity(0.7))
-                            .padding(.horizontal,30)
-                            .padding(.vertical,12)
-                    }
-                    .background(self.index == 2 ? Color.black.opacity(0.06) : Color.clear)
-                    .clipShape(CShapeCard1())
-                    
-                    Button(action: {
-                        self.index = 3
-                    }) {
-                        Text("Turkish")
-                            .foregroundColor(self.index == 3 ? Color("gray1") : Color.black.opacity(0.7))
-                            .padding(.horizontal,30)
-                            .padding(.vertical,12)
-                    }
-                    .background(self.index == 3 ? Color.black.opacity(0.06) : Color.clear)
-                    .clipShape(CShapeCard1())
-                    
-                    Button(action: {
-                        self.index = 4
-                    }) {
-                        Text("Arabish")
-                            .foregroundColor(self.index == 4 ? Color("gray1") : Color.black.opacity(0.7))
-                            .padding(.horizontal,30)
-                            .padding(.vertical,12)
-                    }
-                    .background(self.index == 4 ? Color.black.opacity(0.06) : Color.clear)
-                    .clipShape(CShapeCard1())
+                   
                 }
                 .padding(.horizontal,20)
             }
@@ -232,7 +161,7 @@ struct MainView: View {
                         VStack{
                             Image(i.image)
                                 .resizable()
-                                .frame(width: 125,height: 125)
+                                .frame(width: 125,height: 500)
                                 .clipShape(Circle())
                             
                             Text(i.price)
@@ -242,19 +171,9 @@ struct MainView: View {
                                 .padding(.top)
                             
                             Text(i.name)
-                                .padding(.vertical,20)
+                                .padding(.vertical,10)
                             
-                            Button(action: {
-                                
-                            }) {
-                                Text("Add")
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.white)
-                                    .padding(.vertical)
-                                    .padding(.horizontal,35)
-                            }
-                            .background(Color("gray2"))
-                            .clipShape(CShapeCard1())
+                            
                         }
                         .padding(.vertical)
                         .padding(.horizontal,40)
@@ -262,27 +181,9 @@ struct MainView: View {
                         .clipShape(CShapeCard1())
                     }
                 }
-                .padding(.horizontal,20)
+                .padding(.horizontal,5)
             }
-            .padding(.top,25)
-            Spacer()
-            
-            HStack{
-                
-                Spacer()
-                
-                Button(action: {
-                    
-                }) {
-                    Text("View All")
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .padding(.horizontal,35)
-                        .padding(.vertical)
-                }
-                .background(Color("gray3"))
-                .clipShape(CShapeCard1())
-            }
+            .padding(.top)
             .padding(.horizontal,20)
         }
     }
@@ -297,16 +198,13 @@ struct Type: Identifiable {
     var image: String
 }
 var data = [
-Type(name: "Chill", cName: "Arabish", price: "1", image: "pic1"),
-Type(name: "Chill", cName: "Arabish", price: "2", image: "pic2"),
-Type(name: "Chill", cName: "Arabish", price: "3", image: "pic3"),
-Type(name: "Chill", cName: "Arabish", price: "4", image: "pic4"),
-Type(name: "Chill", cName: "Arabish", price: "5", image: "pic5"),
-Type(name: "Chill", cName: "Arabish", price: "6", image: "pic6"),
-Type(name: "Chill", cName: "Arabish", price: "7", image: "pic7"),
-Type(name: "Chill", cName: "Arabish", price: "8", image: "pic8"),
-Type(name: "Chill", cName: "Arabish", price: "9", image: "pic9"),
-Type(name: "Chill", cName: "Arabish", price: "10", image: "pic10")
+Type(name: "Chill", cName: "Arabish", price: "1", image: "one"),
+Type(name: "Chill", cName: "Arabish", price: "2", image: "two"),
+Type(name: "Chill", cName: "Arabish", price: "3", image: "three"),
+Type(name: "Chill", cName: "Arabish", price: "4", image: "four"),
+Type(name: "Chill", cName: "Arabish", price: "5", image: "five"),
+Type(name: "Chill", cName: "Arabish", price: "6", image: "six"),
+Type(name: "Chill", cName: "Arabish", price: "7", image: "seven")
 
 ]
 
@@ -343,7 +241,7 @@ struct Notifications: View {
 
 struct CShapeCard: Shape{
     func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: [.topRight,.bottomRight],cornerRadii: CGSize(width: 35, height: 35))
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: [.topRight,.bottomRight],cornerRadii: CGSize(width: 0, height: 0))
         
         return Path(path.cgPath)
     }

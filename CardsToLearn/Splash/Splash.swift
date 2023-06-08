@@ -69,7 +69,7 @@ struct Splash: View {
                 .padding(.trailing)
             
             if showSplash {
-                HomeTabBarView()
+                BaseView()
                     
                     .onTapGesture {
                         

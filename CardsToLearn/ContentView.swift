@@ -68,13 +68,16 @@ struct ContentView: View {
                             Text("Loading...")
                         } else {
                             
-                               Home()
+                               BaseView()
                             
+ 
                         }
                     }
                 }
             } else {
-                LoginSignUp()
+                LoginSignUpView()
+                    .edgesIgnoringSafeArea(.all)
+                    .statusBar(hidden: true )
             }
         }
     }
