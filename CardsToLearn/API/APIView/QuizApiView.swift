@@ -12,12 +12,6 @@ struct QuizApiView: View {
     @State private var selectedCategory: String?
     
     var body: some View {
-        ZStack { // Ein Container, um die Ansicht zu rendern
-            LinearGradient(
-                gradient: Gradient(colors: [Color(#colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1.0)), Color.gray, Color(#colorLiteral(red: 0.8, green: 0.8, blue: 0.8, alpha: 1.0)), Color.white]),
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
             VStack {
                 Button(action: {
                     viewModel.fetchQuiz()
@@ -73,7 +67,7 @@ struct QuizApiView: View {
             .onAppear {
                 viewModel.fetchQuiz()
             }
-        }
+        
     }
 }
 

@@ -10,6 +10,7 @@ import Charts
 
 struct StatisticView: View {
     
+    
     @State var sampleAnalytics: [Statistic] = sample_analytics
     @State var currentTabe: String = "7 Days"
     

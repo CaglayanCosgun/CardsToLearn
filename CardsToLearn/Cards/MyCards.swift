@@ -112,10 +112,10 @@ struct MyCardsSideBar: View {
                         ApiVocabularyView()
                     }
                     else if self.index == 2{
-                        QuotesView()
+                        ApiQuotesView()
                     }
                     else {
-                        Relax()
+                        LearningTipsView()
                     }
                 }
                 .padding(.top,UIApplication.shared.windows.first?.safeAreaInsets.top)

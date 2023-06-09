@@ -8,6 +8,7 @@
 import Foundation
 
 class ApiQuotesViewModel: ObservableObject {
+
     @Published var quotes: [ApiQuotes] = []
     
     func fetchQuote(category: String) {

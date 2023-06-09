@@ -62,7 +62,7 @@ struct BaseView: View {
                                 .tag("Cards")
                         
                         
-                        QuizSelectionView(flashcards: viewModel.cards)
+                        QuizSideSelectionView(flashcards: viewModel.cards)
                             .navigationBarTitleDisplayMode(.inline)
                             .navigationBarHidden(true)
                             .tag("Quiz")
