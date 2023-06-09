@@ -41,6 +41,7 @@
 		C7B9773F2A327F7000496705 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B9773E2A327F7000496705 /* ItemView.swift */; };
 		C7B977412A32861200496705 /* ApiQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B977402A32861100496705 /* ApiQuizView.swift */; };
 		C7B977432A32873B00496705 /* QuizInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B977422A32873B00496705 /* QuizInfo.swift */; };
+		C7B977472A334B1200496705 /* LastCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B977462A334B1200496705 /* LastCardView.swift */; };
 		C7C3EF2D2A03E60D00298F17 /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF2C2A03E60D00298F17 /* ProfilView.swift */; };
 		C7C3EF362A03E6B400298F17 /* QuizCreateCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF352A03E6B400298F17 /* QuizCreateCollectionView.swift */; };
 		C7C3EF3A2A03E74900298F17 /* CategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF392A03E74900298F17 /* CategoryHeaderView.swift */; };
@@ -142,6 +143,7 @@
 		C7B9773E2A327F7000496705 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		C7B977402A32861100496705 /* ApiQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiQuizView.swift; sourceTree = "<group>"; };
 		C7B977422A32873B00496705 /* QuizInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizInfo.swift; sourceTree = "<group>"; };
+		C7B977462A334B1200496705 /* LastCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastCardView.swift; sourceTree = "<group>"; };
 		C7C3EF2C2A03E60D00298F17 /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
 		C7C3EF352A03E6B400298F17 /* QuizCreateCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCreateCollectionView.swift; sourceTree = "<group>"; };
 		C7C3EF392A03E74900298F17 /* CategoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHeaderView.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 		C78E2E4329DCDC3300E21862 /* CardsToLearn */ = {
 			isa = PBXGroup;
 			children = (
+				C7B977452A334B0100496705 /* LastCard */,
 				C71431F02A2B4F1B003A6CD2 /* Info.plist */,
 				C78E2E4429DCDC3300E21862 /* CardsToLearnApp.swift */,
 				C78E2E4629DCDC3300E21862 /* ContentView.swift */,
@@ -455,6 +458,14 @@
 				C7FD01262A2E9BB600953493 /* ScrollViewOffsetModifier.swift */,
 			);
 			path = Modifier;
+			sourceTree = "<group>";
+		};
+		C7B977452A334B0100496705 /* LastCard */ = {
+			isa = PBXGroup;
+			children = (
+				C7B977462A334B1200496705 /* LastCardView.swift */,
+			);
+			path = LastCard;
 			sourceTree = "<group>";
 		};
 		C7C3EF2E2A03E61F00298F17 /* Cards */ = {
@@ -805,6 +816,7 @@
 				C7FD01552A2FA69B00953493 /* BaseHome.swift in Sources */,
 				C78E2E4729DCDC3300E21862 /* ContentView.swift in Sources */,
 				C78E2E7E29DE357700E21862 /* QuizViewModel.swift in Sources */,
+				C7B977472A334B1200496705 /* LastCardView.swift in Sources */,
 				C7D4AA1C2A2946950017C1BE /* Logo.swift in Sources */,
 				C7B977412A32861200496705 /* ApiQuizView.swift in Sources */,
 				C78E2E7029DCDC8600E21862 /* FlashCard.xcdatamodeld in Sources */,

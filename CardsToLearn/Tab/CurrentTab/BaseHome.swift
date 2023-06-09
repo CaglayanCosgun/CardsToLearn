@@ -12,7 +12,7 @@ struct BaseHome: View {
     @Binding var showMenu: Bool
     
     var body: some View {
-        
+        NavigationView{
         VStack{
             
             VStack(spacing: 0){
@@ -52,16 +52,17 @@ struct BaseHome: View {
                 
             }
             .overlay(
-            
-            Image("splashlogo")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 25, height: 25)
+                
+                Image("splashlogo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 25, height: 25)
             )
             
             Spacer()
             
         }
+    }
     }
 }
 

@@ -25,7 +25,7 @@ class FireBaseViewModel: ObservableObject{
     @Published var lastname = ""
     @Published var gender = ""
     @Published var birthdate = Date()
-    @Published var loggedIn = false
+    @Published var loggedIn = true
     @Published var newPassword = ""
     @Published var confirmNewPassword = ""
     

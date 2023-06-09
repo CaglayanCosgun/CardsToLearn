@@ -123,7 +123,7 @@ struct QuizSideSelectionView: View {
         case "Creat Quiz":
             return AnyView(QuizCreationView())
         case "Api Quiz":
-            return AnyView(QuizApiView())
+            return AnyView(ApiQuizView())
         default:
             return AnyView(EmptyView())
         }

@@ -81,28 +81,28 @@ struct HomeView_Previews: PreviewProvider {
     }
 }
 
-struct CardView: View {
-    let card: Card // Annahme: `Card` ist der Datentyp für eine einzelne Karte
-    
-    var body: some View {
-        Text("Zuletzt erstellte Karte")
-            .font(.largeTitle)
-            .foregroundColor(.blue)
-            .fontWeight(.bold)
-            .padding()
-        VStack {
-            Text(card.category ?? "") // Optionale `String` unwrappen und einen Standardwert verwenden
-            Text(card.question ?? "")
-            Text(card.answer ?? "")
-            // Weitere Inhalte und Anpassungen der Kartenansicht hier hinzufügen
-        }
-        .frame( height: 100)
-        .padding()
-        .background(Color.white)
-        .cornerRadius(10)
-        .shadow(radius: 5)
-    }
-}
+//struct CardView: View {
+//    let card: Card // Annahme: `Card` ist der Datentyp für eine einzelne Karte
+//    
+//    var body: some View {
+//        Text("Zuletzt erstellte Karte")
+//            .font(.largeTitle)
+//            .foregroundColor(.blue)
+//            .fontWeight(.bold)
+//            .padding()
+//        VStack {
+//            Text(card.category ?? "") // Optionale `String` unwrappen und einen Standardwert verwenden
+//            Text(card.question ?? "")
+//            Text(card.answer ?? "")
+//            // Weitere Inhalte und Anpassungen der Kartenansicht hier hinzufügen
+//        }
+//        .frame( height: 100)
+//        .padding()
+//        .background(Color.white)
+//        .cornerRadius(10)
+//        .shadow(radius: 5)
+//    }
+//}
 
 
 
@@ -165,3 +165,5 @@ struct LearningTipCard: View {
         .shadow(radius: 5)
     }
 }
+
+

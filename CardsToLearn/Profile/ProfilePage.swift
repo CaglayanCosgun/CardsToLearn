@@ -21,7 +21,7 @@ struct ProfilPage: View {
     
     var body: some View{
         
-        NavigationView{
+        NavigationStack{
             
             ScrollView(.vertical,showsIndicators: false){
                 

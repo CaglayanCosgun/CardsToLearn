@@ -26,7 +26,7 @@ struct MyCardsSideBar: View {
                         self.index = 3
                     }) {
                         VStack{
-                            Text("Relaxing")
+                            Text("Learntips")
                                 .frame(width: 120,height: 35)
                                 .foregroundColor(self.index == 3 ? Color.white : Color.black)
                         }

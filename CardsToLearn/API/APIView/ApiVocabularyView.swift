@@ -21,6 +21,7 @@ struct ApiVocabularyView: View {
             HStack {
                 
                 if !self.show {
+                    
                     Text("Dictionary")
                         .fontWeight(.bold)
                         .font(.title)
@@ -66,10 +67,11 @@ struct ApiVocabularyView: View {
             .padding(.top, (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.safeAreaInsets.top ?? 0 + 15)
             .padding(.horizontal)
             .padding(.bottom, 10)
-            .background(Color.gray)
+            .background(Color("ColorDark"))
+        
             
             if let word = wordVM.words?.word {
-                Image("grayPic")
+                Image("grayImage")
                     .resizable()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .ignoresSafeArea()

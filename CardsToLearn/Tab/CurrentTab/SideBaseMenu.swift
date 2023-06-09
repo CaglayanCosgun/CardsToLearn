@@ -86,6 +86,7 @@ struct SideBaseMenu: View {
                         
                         SideTabButton(title: "LastCard", image: "LastCard")
                         
+                        
                         SideTabButton(title: "LastQuiz", image: "LastQuiz")
                         
                         SideTabButton(title: "Favorites", image: "Favorites")
@@ -229,3 +230,5 @@ extension View {
         return UIScreen.main.bounds
     }
 }
+
+

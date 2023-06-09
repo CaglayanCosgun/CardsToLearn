@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ApiQuotesView: View {
     
+    @State private var showPopListView = false
+    
     let categories = [
         "age", "alone", "amazing", "anger", "architecture", "art", "attitude", "beauty", "best",
         "birthday", "business", "car", "change", "communications", "computers", "cool", "courage",
@@ -34,15 +36,17 @@ struct ApiQuotesView: View {
                     
                     Spacer()
                     
-                    Button{
-                        
-                        
-                    }label: {
-                        Image(systemName: "plus")
-                            .font(.title2)
-                            .foregroundColor(.primary)
-                        
-                    }
+                    Button(action: {
+                                   showPopListView.toggle()
+                               }) {
+                                   Image(systemName: "plus")
+                                       .font(.title2)
+                                       .foregroundColor(.primary)
+                               }
+                               
+                               if showPopListView {
+                                   PopListView()
+                               }
                 }
                 .padding()
                 
@@ -146,11 +150,57 @@ struct ApiQuotesView: View {
                 
             }
         }
+        
         .onAppear {
             quotesVM.fetchQuote(category: "happiness")
         }
     }
 }
+
+struct PopListView: View {
+    let categories = [
+        "age", "alone", "amazing", "anger", "architecture", "art", "attitude", "beauty", "best",
+        "birthday", "business", "car", "change", "communications", "computers", "cool", "courage",
+        "dad", "dating", "death", "design", "dreams", "education", "environmental", "equality",
+        "experience", "failure", "faith", "family", "famous", "fear", "fitness", "food", "forgiveness",
+        "freedom", "friendship", "funny", "future", "god", "good", "government", "graduation", "great",
+        "happiness", "health", "history", "home", "hope", "humor", "imagination", "inspirational",
+        "intelligence", "jealousy", "knowledge", "leadership", "learning", "legal", "life", "love",
+        "marriage", "medical", "men", "mom", "money", "morning", "movies", "success"
+    ]
+
+    var body: some View {
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack {
+                
+                ForEach(0..<categories.count, id: \.self) { index in
+                    
+                    ZStack(alignment: .trailing){
+                        
+                        HStack {
+                            
+                            Image(systemName: "arrow.right")
+                                .fontWeight(.semibold)
+
+                            VStack(alignment: .leading){
+                                
+                                Text(categories[index])
+                                    .fontWeight(.semibold)
+                                
+                                Divider()
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .padding()
+        }
+        .background(Color.white)
+        .frame(width: UIScreen.main.bounds.width - 80, height: UIScreen.main.bounds.height - 250)
+    }
+}
+
 
 struct ApiQuotesView_Previews: PreviewProvider {
     static var previews: some View {
