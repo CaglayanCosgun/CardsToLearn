@@ -143,15 +143,7 @@ struct QuestionView: View{
         
         VStack(spacing: 15){
             
-            Button{
-                dismiss()
-            }label: {
-                Image(systemName: "xmark")
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-            }
-            .hAlign(.leading)
+            
             
             GeometryReader{
                 

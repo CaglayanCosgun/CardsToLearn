@@ -8,9 +8,6 @@
 import SwiftUI
 import CoreData
 
-
-//TODO Filter bei den Cards und Quiz ,für jeden Nutzer eine ID anlegen
-
 struct ContentView: View {
     
     @EnvironmentObject var viewModel: CardViewModel
@@ -26,7 +23,7 @@ struct ContentView: View {
     
     @State var animate = false
     @State var endSplash = false
-
+    
     var body: some View {
         ZStack {
             if showSplashScreen {
@@ -68,9 +65,8 @@ struct ContentView: View {
                             Text("Loading...")
                         } else {
                             
-                               BaseView()
-                            
- 
+                            BaseView()
+    
                         }
                     }
                 }
@@ -94,33 +90,3 @@ struct ContentView: View {
         }
     }
 }
-
-
-
-//NavigationView {
-//    ZStack {
-//        if showSplashScreen {
-//            Logo()
-//                .onAppear {
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
-//                        withAnimation {
-//                            showSplashScreen = false
-//                            showWelcomeScreen = false
-//                        }
-//                    }
-//                }
-//        } else if firebaseViewModel.loggedIn {
-//            if showWelcomeScreen {
-//                Splash()
-//                    .onTapGesture {
-//                        showWelcomeScreen = true
-//                    }
-//            } else {
-//               Home()
-//
-//            }
-//        } else {
-//            LoginSignUp()
-//        }
-//    }
-//}

@@ -60,6 +60,8 @@ struct BaseHome: View {
             )
             
             Spacer()
+            Home()
+            
             
         }
     }

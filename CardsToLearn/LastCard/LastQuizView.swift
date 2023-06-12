@@ -1,15 +1,15 @@
 //
-//  LastCardView.swift
+//  LastQuizView.swift
 //  CardsToLearn
 //
-//  Created by Cagla Yan on 09.06.23.
+//  Created by Cagla Yan on 12.06.23.
 //
 
 import SwiftUI
 import CoreData
 
-struct LastCardView: View {
-    @EnvironmentObject var cardVM: CardViewModel
+struct LastQuizView: View {
+    @EnvironmentObject var quizVM: QuizViewModel
     
     var body: some View {
         VStack(spacing: 0) {
@@ -50,15 +50,15 @@ struct LastCardView: View {
                 VStack(spacing: 20) {
                     
                     
-                    Text("Your last \ncreated Card")
+                    Text("Your last \nplayed Quiz")
                         .font(.system(size: 38, weight: .bold))
                         .multilineTextAlignment(.center)
                         .lineLimit(3)
                         .foregroundColor(.white)
                     
-                    if let lastCreatedCard = cardVM.cards.last {
-                        InfiniteCarouselView(card: lastCreatedCard)
-                    }
+                    if let lastPlayedQuiz = quizVM.quizzes.last {
+                        InfiniteCarouselQuizView(quiz: lastPlayedQuiz)
+                        }
                 }
                 .padding()
                 .frame(maxWidth: .infinity, alignment: .center)
@@ -66,7 +66,7 @@ struct LastCardView: View {
             }
             
             HStack {
-                Text("Flash Card")
+                Text("Quiz")
                     .font(.title3.bold())
                     .foregroundColor(.white)
                 
@@ -108,51 +108,26 @@ struct LastCardView: View {
 }
 
 
-
-struct CustomCornerLast: Shape{
+struct InfiniteCarouselQuizView: View{
     
-    var corners: UIRectCorner
-    var radius: CGFloat
+    let quiz: Quiz
     
-    func path(in rect: CGRect) -> Path {
-        
-        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        
-        return Path(path.cgPath)
-    }
-}
-
-extension View{
-    
-    func getRectLast()->CGRect{
-        return UIScreen.main.bounds
-    }
-}
-
-struct InfiniteCarouselView: View{
-    
-    let card: Card
     
     var body: some View{
         
         VStack(spacing: 18){
-            Text(card.category ?? "")
+            
+            Text("Zuletzt gespieltes Quiz:")
+                .font(.title)
+                .foregroundColor(.black)
+                .fontWeight(.bold)
+            
+            Text(quiz.quizTitle ?? "")
                 .fontWeight(.bold)
                 .font(.largeTitle)
                 .foregroundColor(Color.black.opacity(0.6))
                 
-            
-            Spacer()
-            
-            Text(card.question ?? "")
-                .font(.title3.bold())
-                .foregroundColor(.gray)
-                .multilineTextAlignment(.center)
-            
-            Text(card.answer ?? "")
-                .font(.title3.bold())
-                .foregroundColor(.gray)
-                .multilineTextAlignment(.center)
+        
             
             Spacer()
             

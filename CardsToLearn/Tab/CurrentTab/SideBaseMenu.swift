@@ -83,11 +83,47 @@ struct SideBaseMenu: View {
                                 .foregroundColor(.black)
                         }
                         
+                        NavigationLink{
+                            
+                            LastCardView()
+                                .navigationTitle("LastCard")
+                            
+                        }label: {
+                            
+                            Image("LastCard")
+                                .resizable()
+                                .renderingMode(.template)
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 22,height: 22)
+                                .foregroundColor(.primary)
+                            
+                            Text("LastCard")
+                                .foregroundColor(.black)
+                        }
                         
-                        SideTabButton(title: "LastCard", image: "LastCard")
+                        
+//                        SideTabButton(title: "LastCard", image: "LastCard")
+                        
+                        NavigationLink{
+                            
+                            LastQuizView()
+                                .navigationTitle("LastQuiz")
+                            
+                        }label: {
+                            
+                            Image("LastQuiz")
+                                .resizable()
+                                .renderingMode(.template)
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 22,height: 22)
+                                .foregroundColor(.primary)
+                            
+                            Text("LastQuiz")
+                                .foregroundColor(.black)
+                        }
                         
                         
-                        SideTabButton(title: "LastQuiz", image: "LastQuiz")
+//                        SideTabButton(title: "LastQuiz", image: "LastQuiz")
                         
                         SideTabButton(title: "Favorites", image: "Favorites")
                         

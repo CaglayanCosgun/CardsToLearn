@@ -31,9 +31,6 @@ struct CardsToLearnApp: App {
     @StateObject var taskVM = TaskViewModel()
     
     
-  
-
-    // register app delegate for Firebase setup
       @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
@@ -48,8 +45,6 @@ struct CardsToLearnApp: App {
                 .environmentObject(quotesApiVM)
                 .environmentObject(taskVM)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                
-                
                 
         }
     }

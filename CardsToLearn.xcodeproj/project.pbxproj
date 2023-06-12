@@ -42,6 +42,8 @@
 		C7B977412A32861200496705 /* ApiQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B977402A32861100496705 /* ApiQuizView.swift */; };
 		C7B977432A32873B00496705 /* QuizInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B977422A32873B00496705 /* QuizInfo.swift */; };
 		C7B977472A334B1200496705 /* LastCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B977462A334B1200496705 /* LastCardView.swift */; };
+		C7B977672A37464700496705 /* LastQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B977662A37464700496705 /* LastQuizView.swift */; };
+		C7B977692A37492E00496705 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B977682A37492E00496705 /* ChangePasswordView.swift */; };
 		C7C3EF2D2A03E60D00298F17 /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF2C2A03E60D00298F17 /* ProfilView.swift */; };
 		C7C3EF362A03E6B400298F17 /* QuizCreateCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF352A03E6B400298F17 /* QuizCreateCollectionView.swift */; };
 		C7C3EF3A2A03E74900298F17 /* CategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C3EF392A03E74900298F17 /* CategoryHeaderView.swift */; };
@@ -144,6 +146,8 @@
 		C7B977402A32861100496705 /* ApiQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiQuizView.swift; sourceTree = "<group>"; };
 		C7B977422A32873B00496705 /* QuizInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizInfo.swift; sourceTree = "<group>"; };
 		C7B977462A334B1200496705 /* LastCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastCardView.swift; sourceTree = "<group>"; };
+		C7B977662A37464700496705 /* LastQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastQuizView.swift; sourceTree = "<group>"; };
+		C7B977682A37492E00496705 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
 		C7C3EF2C2A03E60D00298F17 /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
 		C7C3EF352A03E6B400298F17 /* QuizCreateCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCreateCollectionView.swift; sourceTree = "<group>"; };
 		C7C3EF392A03E74900298F17 /* CategoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHeaderView.swift; sourceTree = "<group>"; };
@@ -464,6 +468,8 @@
 			isa = PBXGroup;
 			children = (
 				C7B977462A334B1200496705 /* LastCardView.swift */,
+				C7B977682A37492E00496705 /* ChangePasswordView.swift */,
+				C7B977662A37464700496705 /* LastQuizView.swift */,
 			);
 			path = LastCard;
 			sourceTree = "<group>";
@@ -771,6 +777,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7FD00982A2DE43300953493 /* MyCards.swift in Sources */,
+				C7B977692A37492E00496705 /* ChangePasswordView.swift in Sources */,
 				C78E2E7229DCDCD700E21862 /* CardViewModel.swift in Sources */,
 				C7FD01872A2FE59000953493 /* ProfilePage.swift in Sources */,
 				C7C3EF3A2A03E74900298F17 /* CategoryHeaderView.swift in Sources */,
@@ -801,6 +808,7 @@
 				C7D4A9FC2A1BABA50017C1BE /* QuizApiView.swift in Sources */,
 				C7C3EF2D2A03E60D00298F17 /* ProfilView.swift in Sources */,
 				C7B977432A32873B00496705 /* QuizInfo.swift in Sources */,
+				C7B977672A37464700496705 /* LastQuizView.swift in Sources */,
 				C7FD01442A2F20ED00953493 /* DynamicFilteredView.swift in Sources */,
 				C7FD01462A2F212B00953493 /* Persistence.swift in Sources */,
 				C7D4AA252A29EF900017C1BE /* RelaxingView.swift in Sources */,

@@ -42,6 +42,4 @@ var sample_analytics: [Statistic] = [
     Statistic(hour: Date().updateHour(value: 22), views: 2131000),
     Statistic(hour: Date().updateHour(value: 23), views: 44231000)
     
-    
-
 ]

@@ -16,7 +16,7 @@ struct QuizSideSelectionView: View {
     var flashcards: [Card]
     @State private var animate = false
     @State var selectedCard: Card?
-    @State var isActive: Bool = false
+   
     
     var body: some View {
         NavigationStack {
@@ -40,7 +40,7 @@ struct QuizSideSelectionView: View {
                                 .frame(width: 13, height: 13)
                                 .offset(x: selected == name ? 28 : -80)
                             
-                            Color("gray1")
+                            Color("gray2")
                                 .frame(width: 150, height: 110)
                                 .rotationEffect(.init(degrees: -90))
                                 .offset(x: -50)
@@ -68,7 +68,7 @@ struct QuizSideSelectionView: View {
                 }
                 .frame(width: 70)
                 .background(
-                    Color("gray1")
+                    Color("gray2")
                         .clipShape(Curve(midY: midY))
                         .ignoresSafeArea()
                 )

@@ -15,7 +15,7 @@ class ApiCallViewModel: ObservableObject {
     
     func fetchQuiz() {
         let headers = [
-            "X-RapidAPI-Key": "f162300bbdmsha1477194188de25p1467c9jsnef8c389df48f",
+            "X-RapidAPI-Key": "ff9d1d77a2msh234a827f55e6f45p1db900jsnc356cdd32ddb",
             "X-RapidAPI-Host": "ases-quiz-api1.p.rapidapi.com"
         ]
         

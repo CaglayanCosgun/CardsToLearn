@@ -11,6 +11,7 @@ import CoreData
 class CardViewModel: ObservableObject {
     let persistentContainer: NSPersistentContainer
     @Published var cards = [Card]()
+    @Published var editCard: Card?
     private var categoriesSet = [String]()
     var categories: [String] {
         categoriesSet

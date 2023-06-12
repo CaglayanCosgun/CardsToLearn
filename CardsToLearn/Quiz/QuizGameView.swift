@@ -18,6 +18,12 @@ struct QuizGameView: View {
     @State private var score = 0
     @State private var correctAnswers: [Int] = []
     
+    @State var lastQuestionAnswer = false
+    
+   
+    
+    
+    
     let columns = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -38,14 +44,20 @@ struct QuizGameView: View {
                     .font(.headline)
                     .padding()
                     .frame(maxWidth: .infinity)
-                    .background(Color.blue.opacity(0.2))
+                    .background(Color.gray.opacity(0.2))
                     .cornerRadius(10)
                     .shadow(radius: 5)
                 
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(0..<4) { index in
                         Button(action: {
+                            if currentQuestion == questions.count{
+                                lastQuestionAnswer = true
+                                
+                            }
                             checkAnswer(answer: index)
+                            print("CurrentQ:\(currentQuestion)")
+                            print("QCount:\(questions.count)")
                             
                         }) {
                             Text(getAnswer(index: index))
@@ -54,7 +66,7 @@ struct QuizGameView: View {
                                 .padding()
                                 .frame(maxWidth: .infinity)
                         }
-                        .background(Color.blue)
+                        .background(Color.gray)
                         .cornerRadius(10)
                         .shadow(radius: 5)
                     }
@@ -70,14 +82,14 @@ struct QuizGameView: View {
                     .foregroundColor(.white)
                     .padding()
                     .frame(maxWidth: .infinity)
-                    .background(Color.blue)
+                    .background(Color.gray)
                     .cornerRadius(10)
                     .shadow(radius: 5)
                 
-                
+               
             }
             .padding()
-            .opacity(currentQuestion == questions.count ? 1 : 0) // Ergebnisse anzeigen, wenn alle Fragen beantwortet wurden
+            .opacity(currentQuestion == questions.count && lastQuestionAnswer ? 1 : 0) // Ergebnisse anzeigen, wenn alle Fragen beantwortet wurden
         }
     }
 

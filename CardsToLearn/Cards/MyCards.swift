@@ -99,14 +99,14 @@ struct MyCardsSideBar: View {
             }
             .padding(.vertical)
             .frame(width: 85)
-            .background(Color("gray3"))
+            .background(Color("gray2"))
             .clipShape(CShapeCard())
             
             GeometryReader {_ in
                 
                 VStack{
                     if self.index == 0{
-                        MainView()
+                        Relax()
                     }
                     else if self.index == 1{
                         ApiVocabularyView()
@@ -209,35 +209,9 @@ Type(name: "Chill", cName: "Arabish", price: "7", image: "seven")
 ]
 
 
-struct Profil: View {
-    var body: some View {
-        VStack{
-            Text("Profile")
-                .font(.title)
-                .fontWeight(.bold)
-        }
-    }
-}
 
-struct Invoice: View {
-    var body: some View {
-        VStack{
-            Text("Invoice")
-                .font(.title)
-                .fontWeight(.bold)
-        }
-    }
-}
 
-struct Notifications: View {
-    var body: some View {
-        VStack{
-            Text("Notifications")
-                .font(.title)
-                .fontWeight(.bold)
-        }
-    }
-}
+
 
 struct CShapeCard: Shape{
     func path(in rect: CGRect) -> Path {

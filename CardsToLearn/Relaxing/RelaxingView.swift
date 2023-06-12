@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Relax: View {
+    
+    @State var index = 0
+    
     @State var titles = [
         "Clean your Mind from",
         "Unique experience",
@@ -35,7 +38,7 @@ struct Relax: View {
                 
                 Color.black
                 
-                ForEach(1...3,id: \.self) { index in
+                ForEach(1...7,id: \.self) { index in
                     
                     Image("pic\(index)")
                         .resizable()
@@ -62,7 +65,7 @@ struct Relax: View {
                         Text(text.text)
                             .offset(y: text.offset)
                     }
-                    .font(.largeTitle.bold())
+                    .font(.title.bold())
                 }
                 .offset(y: endAnimation ? -100 : 0)
                 .opacity(endAnimation ? 0 : 1)
@@ -95,7 +98,7 @@ struct Relax: View {
                     subTitleAnimation.toggle()
                     endAnimation.toggle()
                     
-                    withAnimation(.easeIn(duration: 0.6)) {
+                    withAnimation(.easeIn(duration: 1.6)) {
                         if currentIndex < (titles.count - 1) {
                             currentIndex += 1
                         }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct CarousselBodyView: View {
     let card: Card
@@ -54,6 +55,8 @@ struct CarousselBodyView: View {
                                 .kerning(1.2)
                                 .foregroundColor(.white)
                         }
+                        .foregroundStyle(.white)
+                        .padding(.top)
                     }
                     
                     Spacer(minLength: 20)
@@ -81,14 +84,7 @@ struct CarousselBodyView: View {
                         
                         HStack{
                             
-                            VStack{
-                                Text("30")
-                                    .font(.title2.bold())
-                                
-                                Text("Cards")
-                                    .foregroundStyle(.secondary)
-                            }
-                            .frame(maxWidth: .infinity)
+                           
                             
                             VStack{
                                 
@@ -102,14 +98,7 @@ struct CarousselBodyView: View {
                             }
                             .frame(maxWidth: .infinity)
                             
-                            VStack{
-                                Text("140")
-                                    .font(.title2.bold())
-                                
-                                Text("Total Cards")
-                                    .foregroundStyle(.secondary)
-                            }
-                            .frame(maxWidth: .infinity)
+                           
                             
                             
                         }
@@ -127,8 +116,8 @@ struct CarousselBodyView: View {
                             showingQuestion.toggle() // Ändert den internen Zustand, um die Frage oder Antwort anzuzeigen
                         }
                         .padding()
-                        .foregroundColor(.white)
-                        .background(Color.blue)
+                        .foregroundColor(.black)
+                        .background(Color.white)
                         .cornerRadius(10)
                         
                         Spacer()
@@ -142,7 +131,7 @@ struct CarousselBodyView: View {
                         VStack(alignment: .center, spacing: 0) { // Definiert ein vertikales Stack-Element mit zentrierter Ausrichtung und keinem Abstand zwischen den Elementen
                             Text(card.category ?? "") // Fügt einen Text hinzu, der die Kategorie der Karte darstellt; der Null-Coalescing-Operator stellt sicher, dass der Text angezeigt wird, wenn card.category nicht nil ist
                                 .font(.title) // Definiert die Schriftgröße des Textes
-                                .foregroundColor(.black) // Definiert die Schriftfarbe des Textes
+                                .foregroundColor(.white) // Definiert die Schriftfarbe des Textes
                                 .padding(.horizontal, 20) // Fügt einen horizontalen Abstand von 20 Punkten zu beiden Seiten des Textes hinzu
                                 .padding(.vertical, 10) // Fügt einen vertikalen Abstand von 10 Punkten über und unter dem Text hinzu
                                 .lineLimit(1) // Begrenzt die Anzahl der Textzeilen auf 1, um sicherzustellen, dass der Text innerhalb der verfügbaren Platzes bleibt

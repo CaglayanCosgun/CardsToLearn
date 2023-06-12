@@ -103,12 +103,13 @@ struct LoginSignUpView: View {
                         Button{
                             
                             firebaseViewModel.login()
-                            
+                            print("Test:\(firebaseViewModel.loggedIn)")
                             // Check, ob der Login erfolgreich war
                             if firebaseViewModel.loggedIn {
                                 showAlert = false
                             } else {
                                 showAlert = true
+                                
                             }
                             
                         }label: {

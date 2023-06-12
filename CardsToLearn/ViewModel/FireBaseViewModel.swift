@@ -11,6 +11,7 @@ import FirebaseFirestore
 import FirebaseAuth
 import SwiftUI
 
+
 class FireBaseViewModel: ObservableObject{
     
     // Referenz auf die Firebase Datenbank
@@ -47,7 +48,8 @@ class FireBaseViewModel: ObservableObject{
                 if error == nil && authResult != nil{
                     //Todo: statt navPath self ?? FirebaseViewModel
                     self!.currentUser = authResult?.user
-                    (self ?? FireBaseViewModel()).loggedIn = true
+                    strongSelf.loggedIn = true
+                    print("ViewModel:\(strongSelf.loggedIn)")
                 }else {
                     print (error?.localizedDescription)
                 }

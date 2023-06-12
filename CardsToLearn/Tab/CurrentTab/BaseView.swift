@@ -43,6 +43,8 @@ struct BaseView: View {
                 
                 VStack(spacing: 0){
                     
+                    
+                    
                     TabView(selection: $currentTab){
                         
                         BaseHome(showMenu: $showMenu)
@@ -67,6 +69,8 @@ struct BaseView: View {
                             .navigationBarHidden(true)
                             .tag("Quiz")
                     }
+                    
+                    
                     VStack(spacing: 0){
                         
                         Divider()
@@ -204,5 +208,12 @@ struct BaseView: View {
 struct BaseView_Previews: PreviewProvider {
     static var previews: some View {
         BaseView()
+    }
+}
+
+
+extension View {
+    func getRectSlide()->CGRect{
+        return UIScreen.main.bounds
     }
 }
