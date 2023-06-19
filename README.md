@@ -49,3 +49,24 @@ Durch das Plus icon kann man die Flashcards erstellen und speichern, was durch C
 
 Klickt man auf eine ausgewählte Karte wird nur die Frage angezeigt und die Antwort versteckt, jedoch beim klicken des Show Answer Button 
 und andersrum mit Show Question wird die Antwort/Frage angezeigt.![CardDetail](https://github.com/CaglayanCosgun/CardsToLearn/assets/115452046/c817099d-4327-480b-a145-e5ed75589e57)
+
+
+# QuizTab:
+Das Quiz icon zeigt die Informationen über die jeweiligen Quizze an. An der Leiste steht ebenfalls noch mal welche Quizze zur Verfügung stehen. Am anfang werden Informationen über das CardQuiz angezeigt, wenn man nach oben swiped wird das CreateQuiz angezeigt. ![CardQuiz](https://github.com/CaglayanCosgun/CardsToLearn/assets/115452046/846e76c5-bdef-4b36-adca-938680c74ea3)
+![CreateQuiz](https://github.com/CaglayanCosgun/CardsToLearn/assets/115452046/d453f9c5-ecd3-4d89-803b-b75c78802cf5)
+Sobald man auf das CardQuiz an der Leiste klickt werden alle Kategorien und die Anzahl der Fragen der Flashcards aufgelistet. Hier kann man mit seinen erstellten Flashcards das Quiz starten. Bei den Quiz einstellungen hat man die freie Auswahl ,ob von allen Kategorien oder von einer bestimmten Kategorie man spielen möchte und die Anzahl der Fragen die gestellt werden sollen. 
+![FlashCardQuiz](https://github.com/CaglayanCosgun/CardsToLearn/assets/115452046/47a86356-48eb-49d0-90a7-01da4c09efff)
+
+Beim klicken des CreateQuiz hat der Nutzer die Möglichkeit sein eigenes Quiz zu erstellen mit einem Kategoriennamen, frage und 4 möglichen Antworten , indem er die richtig Antwort auswählt.![CreateQuiz](https://github.com/CaglayanCosgun/CardsToLearn/assets/115452046/49005f04-9aa8-47bf-a6f7-564c49ed1514)
+
+Beim Klicken des Icon dass oben rechts liegt, werden alle erstellten Quizze angezeigt. ![CreatedQuiz](https://github.com/CaglayanCosgun/CardsToLearn/assets/115452046/354b01ae-e36b-402e-ae27-a00d2c7fc7f0)
+
+Klickt man auf die Kategorienamen werden alle Fragen in einer Liste angezeigt und man hat und auf das klicken des star play button die Möglichkeit das Quiz zu spielen.![QuizPlay](https://github.com/CaglayanCosgun/CardsToLearn/assets/115452046/e0be352e-80ef-41d9-82da-5ea6ed2dc45a)
+
+Beim klicken der QuizApi wird eine View mit den Regeln angezeigt und darauf hingewiesen dass es ein englisches Quiz ist, random fragen sind und die fragen sich jedesmal ändern usw.
+![QuizApi](https://github.com/CaglayanCosgun/CardsToLearn/assets/115452046/4f30cf16-0362-43bd-bbad-249018612ac4)
+
+
+# Noch zu erledigen:
+Mein Ziel ist bestimmte Views vom Desgin zu verschönern und die restlichen Views zu erstellen.
+
